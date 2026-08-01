@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anwesha — UI/UX Design Director Portfolio</title>
+  <meta name="description" content="Anwesha's creative portfolio. UI/UX Design Director crafting intuitive digital experiences where beauty meets usability.">
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       DESIGN TOKENS
+       ============================================================ */
+    :root {
+      --cream:    #FCF7F5;
+      --blush:    #F5C4D7;
+      --dusty:    #E8AFC2;
+      --mauve:    #BE86A2;
+      --plum:     #65445C;
+      --charcoal: #262626;
+
+      --serif:      'Playfair Display', serif;
+      --editorial:  'Cormorant Garamond', serif;
+      --sans:       'Manrope', sans-serif;
+
+      /* Updated by JS rAF every frame */
+      --mouseX: 0;
+      --mouseY: 0;
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { background: var(--cream); scroll-behavior: auto; }
+    body {
+      font-family: var(--sans);
+      color: var(--charcoal);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      cursor: none;
+      overflow-x: hidden;
+    }
+
+    /* ============================================================
+       PAPER NOISE + BLUSH GLOWS
+       ============================================================ */
+    .paper-noise {
+      position: fixed; inset: 0; z-index: 1; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
+    }
+    .blush-glow {
+      position: fixed; border-radius: 50%;
+      pointer-events: none; z-index: 0;
+      width: 62vmax; height: 62vmax; filter: blur(115px);
+    }
+    .blush-tl { top: -18%; left: -18%; background: radial-gradient(circle, rgba(245,196,215,.14) 0%, transparent 70%); }
+    .blush-br { bottom: -18%; right: -18%; background: radial-gradient(circle, rgba(232,175,194,.10) 0%, transparent 70%); }
+
+    /* ============================================================
+       CUSTOM CURSOR
+       ============================================================ */
+    .cur-dot {
+      position: fixed; width: 7px; height: 7px; border-radius: 50%;
+      background: var(--plum); pointer-events: none; z-index: 9999;
+      transform: translate(-50%,-50%);
+      transition: width .3s, height .3s, background .3s;
+    }
+    .cur-ring {
+      position: fixed; width: 38px; height: 38px; border-radius: 50%;
+      border: 1px solid rgba(101,68,92,.22); pointer-events: none; z-index: 9998;
+      transform: translate(-50%,-50%);
+      transition: width .35s, height .35s, border-color .35s, background .35s;
+    }
+    body.hovering .cur-dot  { width: 13px; height: 13px; background: var(--dusty); }
+    body.hovering .cur-ring { width: 58px; height: 58px; border-color: var(--mauve); background: rgba(245,196,215,.06); }
+
+    /* ============================================================
+       EDITORIAL GRID LINES & FLOATING LABELS
+       ============================================================ */
+    .grid-v {
+      position: fixed; left: 4.5%; top: 100px; bottom: 82px;
+      width: .5px; background: rgba(38,38,38,.07); z-index: 2; pointer-events: none;
+    }
+    .grid-h {
+      position: fixed; left: 4.5%; right: 4.5%; top: calc(100vh - 192px);
+      height: .5px; background: rgba(38,38,38,.07); z-index: 2; pointer-events: none;
+    }
+    .label-vertical {
+      position: fixed; left: 2.6%; top: 50%;
+      transform: translateY(-50%) rotate(-90deg); transform-origin: left center;
+      font-size: .57rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .24em; color: var(--mauve); white-space: nowrap;
+      z-index: 2; opacity: .42; pointer-events: none;
+    }
+    .label-coord {
+      position: fixed; left: 6%; bottom: 148px;
+      font-size: .57rem; font-weight: 500; text-transform: uppercase;
+      letter-spacing: .14em; color: var(--mauve); opacity: .58; z-index: 2; pointer-events: none;
+    }
+    .label-edition {
+      position: fixed; right: 6%; bottom: 148px;
+      font-size: .57rem; font-weight: 500; text-transform: uppercase;
+      letter-spacing: .14em; color: var(--mauve); opacity: .58; z-index: 2; pointer-events: none;
+    }
+    .reg-mark {
+      position: fixed; right: 4.5%; top: 128px;
+      width: 30px; height: 30px; color: var(--mauve); opacity: .32; z-index: 2; pointer-events: none;
+    }
+    .reg-mark svg { width: 100%; height: 100%; }
+    .grid-index {
+      position: absolute; left: 5%; top: 34%;
+      font-size: .48rem; letter-spacing: .07em; color: var(--mauve); opacity: .46; pointer-events: none;
+      z-index: 1;
+    }
+
+    /* ============================================================
+       SCROLL PINNING ARCHITECTURE
+       ============================================================ */
+    .scroll-track {
+      position: relative; width: 100%;
+      height: 250vh; /* 160vh hero active + 90vh next-section */
+    }
+    .hero-sticky {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+      overflow: hidden; z-index: 3;
+    }
+
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    .nav {
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 100px; display: flex; justify-content: space-between; align-items: center;
+      padding: 0 4.5%; z-index: 10;
+    }
+    .nav-brand {
+      font-family: var(--editorial); font-size: 1.55rem; font-weight: 500;
+      font-style: italic; color: var(--charcoal); text-decoration: none;
+    }
+    .nav-brand em {
+      font-family: var(--sans); font-size: .62rem; font-weight: 600;
+      font-style: normal; text-transform: uppercase; letter-spacing: .1em;
+      margin-left: 8px; opacity: .55;
+    }
+    .nav-btn {
+      background: none; border: none; cursor: none;
+      font-size: .73rem; font-weight: 500; text-transform: uppercase;
+      letter-spacing: .17em; color: var(--charcoal);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .nav-line { width: 22px; height: 1px; background: var(--charcoal); transition: transform .3s; transform-origin: right; }
+    .nav-btn:hover .nav-line { transform: scaleX(1.4); }
+
+    /* ============================================================
+       HERO LAYOUT
+       ============================================================ */
+    .hero-container {
+      width: 100%; height: 100vh;
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 100px 4.5% 80px; position: relative; z-index: 3;
+    }
+    .hero-meta {
+      display: flex; gap: 8%; margin-top: 40px; padding-left: 22px;
+    }
+    .meta-item { display: flex; flex-direction: column; gap: 6px; }
+    .meta-label { font-size: .59rem; font-weight: 500; text-transform: uppercase; letter-spacing: .14em; color: var(--mauve); }
+    .meta-val   { font-family: var(--editorial); font-size: 1.05rem; font-style: italic; color: var(--charcoal); }
+
+    .title-wrapper {
+      position: relative; width: 100%;
+      display: flex; justify-content: center; align-items: center;
+      user-select: none; flex: 1;
+    }
+
+    /* ============================================================
+       ANWESHA TYPOGRAPHY SYSTEM
+       Each .char-unit holds its own photo via --char-bg.
+       background-size: cover + background-position: center top
+       ensures the face/upper body fills the letter column.
+       background-attachment: local (NOT fixed) — each letter
+       is an independent portrait window.
+       ============================================================ */
+
+    .masked-title {
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 15vw;
+      line-height: .82;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: 0;
+      pointer-events: none;
+    }
+
+    /* Each letter's bounding container */
+    .char-unit {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* Height is set to 1.18em so the slot has room to grow */
+      height: 1.18em;
+      overflow: visible;
+      /* JS writes --char-split-gap and --slot-opacity per frame */
+    }
+
+    /* ---- Shared styles for BOTH halves ---- */
+    .char-part {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Text is transparent; photo shows through the glyph shape */
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      /*
+        background-image set via --char-bg (unique per letter).
+        Fallback gradient for letters without a photo yet.
+      */
+      background-image:
+        var(--char-bg, linear-gradient(145deg, var(--dusty) 0%, var(--blush) 45%, var(--mauve) 100%));
+      background-size: cover;
+      /*
+        Vertical crop: position face in upper third of the letter.
+        Horizontal crop: centered.
+        Mouse parallax: tiny offset via --mouseX / --mouseY for the active letter.
+        Each unit applies its own parallax factor via --px-factor (set inline).
+      */
+      background-position:
+        calc(50% + var(--mouseX, 0) * calc(var(--px-factor, 0) * -22px))
+        calc(18% + var(--mouseY, 0) * -18px);
+      background-attachment: local; /* CRITICAL: each letter = its own photo space */
+      background-repeat: no-repeat;
+    }
+
+    /* Top half — clipped to upper 50%, slides UP */
+    .char-top {
+      clip-path: inset(0 0 50% 0);
+      transform: translateY(calc(-1 * var(--char-split-gap, 0px)));
+    }
+
+    /* Bottom half — clipped to lower 50%, slides DOWN */
+    .char-bottom {
+      clip-path: inset(50% 0 0 0);
+      transform: translateY(var(--char-split-gap, 0px));
+    }
+
+    /*
+      THE PORTRAIT WINDOW — expands between the two halves.
+      Uses the same per-letter photo. Grows from 0 height to MAX_SPLIT_VH.
+    */
+    .char-slot {
+      position: absolute;
+      left: 6%; right: 6%;
+      /* Grows symmetrically from the letter's midline */
+      top:    calc(50% - var(--char-split-gap, 0px));
+      bottom: calc(50% - var(--char-split-gap, 0px));
+      z-index: 0;
+      opacity: var(--slot-opacity, 0);
+      background-image:
+        var(--char-bg, linear-gradient(145deg, var(--dusty) 0%, var(--blush) 45%, var(--mauve) 100%));
+      background-size: cover;
+      background-position:
+        calc(50% + var(--mouseX, 0) * calc(var(--px-factor, 0) * -22px))
+        calc(18% + var(--mouseY, 0) * -18px);
+      background-attachment: local;
+      background-repeat: no-repeat;
+      /* Thin editorial frame lines flanking the portrait window */
+      border-left:  .5px solid rgba(252,247,245,.3);
+      border-right: .5px solid rgba(252,247,245,.3);
+    }
+
+    /* ============================================================
+       BOTTOM PANEL
+       ============================================================ */
+    .hero-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      align-items: flex-end;
+      gap: 10%; width: 100%;
+    }
+    .role-title {
+      font-size: .83rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .32em;
+    }
+    .role-desc {
+      font-family: var(--editorial); font-size: 1.52rem;
+      line-height: 1.45; opacity: .84; letter-spacing: -.01em; margin-top: 14px;
+    }
+    .desc-group { display: flex; flex-direction: column; max-width: 440px; }
+    .hero-actions { display: flex; gap: 28px; justify-content: flex-end; align-items: center; }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn {
+      position: relative; display: inline-flex;
+      justify-content: center; align-items: center;
+      height: 52px; padding: 0 34px; border-radius: 26px;
+      font-size: .71rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .15em; text-decoration: none; cursor: none;
+      transition: background-color .4s, border-color .4s;
+      transform-style: preserve-3d;
+    }
+    .btn-text { display: inline-block; position: relative; z-index: 2; pointer-events: none; }
+    .btn-primary  { background: var(--plum); color: var(--cream); border: 1px solid var(--plum); }
+    .btn-primary:hover  { background: var(--charcoal); border-color: var(--charcoal); }
+    .btn-secondary { background: transparent; color: var(--plum); border: 1px solid rgba(101,68,92,.24); }
+    .btn-secondary:hover { background: var(--blush); border-color: var(--blush); }
+
+    /* ============================================================
+       NEXT SECTION — magazine page-turn
+       ============================================================ */
+    .next-section {
+      position: relative; width: 100%; height: 100vh;
+      background: var(--charcoal); color: var(--cream); z-index: 10;
+      display: flex; flex-direction: column; justify-content: center;
+      align-items: center; text-align: center; padding: 0 6%;
+      box-shadow: 0 -28px 56px rgba(38,38,38,.2);
+    }
+    .next-inner {
+      max-width: 560px; display: flex; flex-direction: column; gap: 20px;
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 1.1s cubic-bezier(.16,1,.3,1), transform 1.1s cubic-bezier(.16,1,.3,1);
+    }
+    .next-section.visible .next-inner { opacity: 1; transform: translateY(0); }
+    .next-label { font-size: .64rem; font-weight: 600; text-transform: uppercase; letter-spacing: .22em; color: var(--dusty); }
+    .next-title { font-family: var(--editorial); font-size: 2.3rem; line-height: 1.35; font-weight: 400; font-style: italic; }
+    .next-sub   { font-size: .68rem; opacity: .45; letter-spacing: .12em; text-transform: uppercase; }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1024px) {
+      .masked-title { font-size: 13vw; }
+      .hero-bottom  { grid-template-columns: 1fr 1fr; gap: 5%; }
+    }
+    @media (max-width: 768px) {
+      body { cursor: auto; }
+      .cur-dot, .cur-ring { display: none; }
+      .grid-v, .grid-h, .label-vertical, .label-coord, .label-edition, .reg-mark { display: none; }
+      .scroll-track { height: auto; }
+      .hero-sticky  { position: relative; height: auto; overflow: visible; }
+      .hero-container { height: auto; min-height: 100vh; padding: 90px 6% 60px; gap: 50px; }
+      .masked-title { font-size: 13vw; }
+      .hero-bottom  { grid-template-columns: 1fr; gap: 32px; }
+      .hero-actions { justify-content: flex-start; }
+      .char-top  { transform: none !important; }
+      .char-bottom { transform: none !important; }
+      .char-slot { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cur-dot"  id="cur-dot"></div>
+  <div class="cur-ring" id="cur-ring"></div>
+
+  <!-- Background atmosphere -->
+  <div class="paper-noise"></div>
+  <div class="blush-glow blush-tl"></div>
+  <div class="blush-glow blush-br"></div>
+
+  <!-- Editorial grid lines -->
+  <div class="grid-v"></div>
+  <div class="grid-h"></div>
+  <div class="label-vertical">STUDIO ANWESHA © EDITORIAL PORTFOLIO v2.6</div>
+  <div class="label-coord">REF. 45° 25′ N / 75° 41′ W</div>
+  <div class="label-edition">EST. 2026 // ISSUE 01</div>
+  <div class="reg-mark">
+    <svg viewBox="0 0 40 40">
+      <circle cx="20" cy="20" r="8" fill="none" stroke="currentColor" stroke-width=".6"/>
+      <line x1="20" y1="3"  x2="20" y2="37" stroke="currentColor" stroke-width=".6"/>
+      <line x1="3"  y1="20" x2="37" y2="20" stroke="currentColor" stroke-width=".6"/>
+    </svg>
+  </div>
+
+  <!-- ===========================================================
+       SCROLL TRACK — 250vh container that pins the hero
+       =========================================================== -->
+  <div class="scroll-track" id="scroll-track">
+
+    <div class="hero-sticky" id="hero-sticky">
+
+      <!-- Navigation -->
+      <nav class="nav" id="nav-bar" aria-label="Main navigation">
+        <a href="#" class="nav-brand">ANWESHA.<em>UI/UX</em></a>
+        <button class="nav-btn" aria-label="Open index menu">
+          <span>Index</span>
+          <div class="nav-line"></div>
+        </button>
+      </nav>
+
+      <!-- Hero -->
+      <main class="hero-container">
+
+        <!-- Editorial metadata top -->
+        <section class="hero-meta" id="hero-meta" aria-label="Portfolio edition details">
+          <div class="meta-item">
+            <span class="meta-label">Design System</span>
+            <span class="meta-val">Studio 26</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Concept Space</span>
+            <span class="meta-val">Aesthetic Restraint</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Framer Showcase</span>
+            <span class="meta-val">Honors Edition</span>
+          </div>
+        </section>
+
+        <!-- ===========================================================
+             ANWESHA — 7 SPLIT LETTER UNITS
+             Each unit owns its own photo via --char-bg.
+             --px-factor controls individual horizontal mouse parallax.
+             =========================================================== -->
+        <section class="title-wrapper" aria-hidden="true">
+          <div class="grid-index">[INDEX // H1-MEMBER]</div>
+
+          <h1 class="masked-title" aria-label="ANWESHA">
+
+            <!--
+              A  — idx 0
+              Photo: anwesha.png (original portrait — pink lanyard)
+              Mood: direct, confrontational, the opening note
+            -->
+            <span class="char-unit" data-idx="0"
+              style="width:.72em; --char-bg: url('anwesha.png'); --px-factor: -1.4">
+              <span class="char-part char-top">A</span>
+              <span class="char-slot"></span>
+              <span class="char-part char-bottom">A</span>
+            </span>
+
+            <!--
+              N  — idx 1
+              Photo: photo-n.jpg (teal+orange saree, building, gazing sideways)
+              Mood: composed, architectural — matches the vertical building lines
+            -->
+            <span class="char-unit" data-idx="1"
+              style="width:.72em; margin-left:-.05em; --char-bg: url('photo-n.jpg'); --px-factor: -0.8">
+              <span class="char-part char-top">N</span>
+              <span class="char-slot"></span>
+              <span class="char-part char-bottom">N</span>
+            </span>
+
+            <!--
+              W  — idx 2
+              Photo: photo-w.jpg (yellow kurta, pink bougainvillea, laughing)
+              Mood: joyful, botanical — contrasts the wide W beautifully
+            -->
+            <span class="char-unit" data-idx="2"
+              style="width:.94em; margin-left:-.06em; --char-bg: url('photo-w.jpg'); --px-factor: -0.3">
+              <span class="char-part char-top">W</span>
+              <span class="char-slot"></span>
+              <span class="char-part char-bottom">W</span>
+            </span>
+
+            <!--
+              E  — idx 3 — the CENTRE letter
+              Photo: photo-e.jpg (red saree, garden, warm direct smile)
+              Mood: warm, golden, frontal — the heart of the name
+            -->
+            <span class="char-unit" data-idx="3"
+              style="width:.66em; margin-left:-.04em; --char-bg: url('photo-e.jpg'); --px-factor: 0">
+              <span class="char-part char-top">E</span>
+              <span class="char-slot"></span>
+              <span class="char-part char-bottom">E</span>
+            </span>
+
+            <!--
+              S  — idx 4
+              Photo: photo-s.jpg (teal saree, sitting on railing, street behind)
+              Mood: relaxed, urban, candid — slight lean mirrors the S curve
+            -->
+            <span class="char-unit" data-idx="4"
+              style="width:.67em; margin-left:-.05em; --char-bg: url('photo-s.jpg'); --px-factor: 0.3">
+              <span class="char-part char-top">S</span>
+              <span class="char-slot"></span>
+              <span class="char-part char-bottom">S</span>
+            </span>
+
+            <!--
+              H  — idx 5
+              Photo: photo-h.jpg (yellow kurti, jhumkas, bougainvillea, looking sideways up)
+              Mood: dreamy, profile — gaze upward matches the tall H verticals
+            -->
+            <span class="char-unit" data-idx="5"
+              style="width:.72em; margin-left:-.04em; --char-bg: url('photo-h.jpg'); --px-factor: 0.8">
+              <span class="char-part char-top">H</span>
+              <span class="char-slot"></span>
+              <span class="char-part char-bottom">H</span>
+            </span>
+
+            <!--
+              A  — idx 6 — closing A
+              Photo: photo-a2.jpg (placeholder = anwesha.png until 7th photo arrives)
+              Swap src to photo-a2.jpg once you send the final image.
+            -->
+            <span class="char-unit" data-idx="6"
+              style="width:.72em; margin-left:-.06em; --char-bg: url('anwesha.png'); --px-factor: 1.4">
+              <span class="char-part char-top">A</span>
+              <span class="char-slot"></span>
+              <span class="char-part char-bottom">A</span>
+            </span>
+
+          </h1>
+        </section>
+
+        <!-- Bottom panel: role + desc + CTAs -->
+        <section class="hero-bottom" id="hero-bottom">
+          <div class="desc-group">
+            <h2 class="role-title">UI/UX Design Director</h2>
+            <p class="role-desc">Designing intuitive digital experiences where beauty meets usability.</p>
+          </div>
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary magnetic" data-strength="28" role="button">
+              <span class="btn-text">View Portfolio</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary magnetic" data-strength="18" role="button">
+              <span class="btn-text">Let's Connect</span>
+            </a>
+          </div>
+        </section>
+
+      </main>
+    </div><!-- /hero-sticky -->
+
+    <!-- ===========================================================
+         NEXT SECTION — magazine page-turn
+         =========================================================== -->
+    <div class="next-section" id="next-section">
+      <div class="next-inner" id="next-inner">
+        <span class="next-label">Portfolio — Selected Works</span>
+        <h2 class="next-title">Where every pixel<br>earns its place.</h2>
+        <span class="next-sub">Scroll to explore the work</span>
+      </div>
+    </div>
+
+  </div><!-- /scroll-track -->
+
+
+  <script>
+    /* ===========================================================
+       ANWESHA PORTFOLIO — MASTER INTERACTION ENGINE
+       Pure Vanilla JS. requestAnimationFrame only. 60fps target.
+       No GSAP. No libraries. No bounce. No overshoot.
+       =========================================================== */
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* ---------------------------------------------------------
+         ELEMENTS
+      --------------------------------------------------------- */
+      const curDot      = document.getElementById('cur-dot');
+      const curRing     = document.getElementById('cur-ring');
+      const navBar      = document.getElementById('nav-bar');
+      const heroMeta    = document.getElementById('hero-meta');
+      const heroBottom  = document.getElementById('hero-bottom');
+      const nextSection = document.getElementById('next-section');
+      const charUnits   = document.querySelectorAll('.char-unit');
+      const magnetics   = document.querySelectorAll('.magnetic');
+      const microEls    = document.querySelectorAll(
+        '.grid-v,.grid-h,.label-vertical,.label-coord,.label-edition,.reg-mark,.grid-index'
+      );
+
+      /* ---------------------------------------------------------
+         STATE
+      --------------------------------------------------------- */
+      let mouseRawX = 0, mouseRawY = 0;
+      let mouseX = 0, mouseY = 0;
+      let scrollRaw = 0, scrollP = 0;
+
+      /* Inertia — 0.055 = soft-paper damping */
+      const SCROLL_EASE = 0.055;
+      const MOUSE_EASE  = 0.08;
+
+      /* Maximum vertical split each half-glyph travels (fraction of vh) */
+      const MAX_GAP_VH = 0.21;
+
+      /* ---------------------------------------------------------
+         EASING
+      --------------------------------------------------------- */
+      const easeOut3   = t => 1 - Math.pow(1 - t, 3);
+      const easeInOutS = t => -(Math.cos(Math.PI * t) - 1) / 2;
+
+      /* ---------------------------------------------------------
+         VISUAL RHYTHM
+         Centre letter (E, idx 3) leads. Outer A's follow last.
+         The stagger is barely perceptible — feels like breathing.
+      --------------------------------------------------------- */
+      const STAGGER = [0.00, 0.05, 0.09, 0.13, 0.09, 0.05, 0.00];
+      const charP = (g, i) => {
+        const o = STAGGER[i] || 0;
+        return Math.min(Math.max((g - o) / (1 - o), 0), 1);
+      };
+
+      /* ---------------------------------------------------------
+         SCROLL — passive, no jank
+         Active track = first 160vh of the 250vh scroll-track.
+      --------------------------------------------------------- */
+      const calcScroll = () =>
+        Math.min(Math.max(window.scrollY / (window.innerHeight * 1.6), 0), 1);
+
+      window.addEventListener('scroll', () => { scrollRaw = calcScroll(); }, { passive: true });
+
+      /* ---------------------------------------------------------
+         MOUSE
+      --------------------------------------------------------- */
+      window.addEventListener('mousemove', e => {
+        curDot.style.left  = curRing.style.left  = e.clientX + 'px';
+        curDot.style.top   = curRing.style.top   = e.clientY + 'px';
+        mouseRawX = (e.clientX / window.innerWidth)  - 0.5;
+        mouseRawY = (e.clientY / window.innerHeight) - 0.5;
+      });
+
+      document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+      });
+
+      /* ---------------------------------------------------------
+         CLICK RIPPLE
+      --------------------------------------------------------- */
+      window.addEventListener('click', e => {
+        const r = document.createElement('div');
+        Object.assign(r.style, {
+          position:'fixed', pointerEvents:'none', zIndex:'9997',
+          left: e.clientX+'px', top: e.clientY+'px',
+          width:'2px', height:'2px', borderRadius:'50%',
+          border: '1px solid var(--dusty)', transform:'translate(-50%,-50%)',
+          transition: 'width .65s ease-out, height .65s ease-out, opacity .65s ease-out'
+        });
+        document.body.appendChild(r);
+        r.offsetWidth;
+        r.style.width = '110px'; r.style.height = '110px'; r.style.opacity = '0';
+        setTimeout(() => r.remove(), 720);
+      });
+
+      /* ---------------------------------------------------------
+         MAGNETIC BUTTONS
+      --------------------------------------------------------- */
+      if (window.innerWidth > 768) {
+        magnetics.forEach(btn => {
+          const txt = btn.querySelector('.btn-text');
+          btn.addEventListener('mouseenter', () => {
+            btn.style.transition = 'none';
+            if (txt) txt.style.transition = 'none';
+          });
+          btn.addEventListener('mousemove', e => {
+            const rc = btn.getBoundingClientRect();
+            const bx = e.clientX - rc.left  - rc.width  / 2;
+            const by = e.clientY - rc.top   - rc.height / 2;
+            const s  = +(btn.dataset.strength) || 20;
+            btn.style.transform = `translate3d(${bx*s/100}px,${by*s/100}px,0)`;
+            if (txt) txt.style.transform = `translate3d(${bx*s*.35/100}px,${by*s*.35/100}px,0)`;
+          });
+          btn.addEventListener('mouseleave', () => {
+            const t = 'transform .55s cubic-bezier(.16,1,.3,1)';
+            btn.style.transition = t; btn.style.transform = 'translate3d(0,0,0)';
+            if (txt) { txt.style.transition = t; txt.style.transform = 'translate3d(0,0,0)'; }
+          });
+        });
+      }
+
+      /* ---------------------------------------------------------
+         PAGE-LOAD ENTRANCE — staggered slide-up per letter
+      --------------------------------------------------------- */
+      charUnits.forEach((u, i) => {
+        const delay = 0.20 + i * 0.072;
+        const rot   = i % 2 === 0 ? 1.4 : -1.4;
+        u.style.opacity   = '0';
+        u.style.transform = `translateY(95px) rotate(${rot}deg)`;
+        u.style.transition =
+          `opacity 1.5s cubic-bezier(.16,1,.3,1) ${delay}s,
+           transform 1.7s cubic-bezier(.16,1,.3,1) ${delay}s`;
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          u.style.opacity = '1';
+          u.style.transform = 'translateY(0) rotate(0deg)';
+        }));
+      });
+
+      [[heroMeta, 0.88], [heroBottom, 0.98]].forEach(([el, d]) => {
+        if (!el) return;
+        el.style.opacity = '0'; el.style.transform = 'translateY(18px)';
+        el.style.transition =
+          `opacity 1.3s cubic-bezier(.16,1,.3,1) ${d}s,
+           transform 1.3s cubic-bezier(.16,1,.3,1) ${d}s`;
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          el.style.opacity = '1'; el.style.transform = 'translateY(0)';
+        }));
+      });
+
+      if (nextSection) nextSection.style.transform = 'translateY(100vh)';
+
+      /* ---------------------------------------------------------
+         MASTER ANIMATION TICK — all effects per rAF frame
+      --------------------------------------------------------- */
+      function tick() {
+
+        /* A. Lerp mouse */
+        mouseX += (mouseRawX - mouseX) * MOUSE_EASE;
+        mouseY += (mouseRawY - mouseY) * MOUSE_EASE;
+        document.documentElement.style.setProperty('--mouseX', mouseX.toFixed(4));
+        document.documentElement.style.setProperty('--mouseY', mouseY.toFixed(4));
+
+        /* B. Lerp scroll */
+        scrollP += (scrollRaw - scrollP) * SCROLL_EASE;
+        const p = scrollP;
+
+        /* C1. Micro-details dissolve (p 0 → 0.26) */
+        const mOp = 1 - easeOut3(Math.min(p / 0.26, 1));
+        microEls.forEach(el => { el.style.opacity = mOp; });
+
+        /* C2. Navigation dissolve (p 0 → 0.34) */
+        if (navBar) navBar.style.opacity = 1 - easeOut3(Math.min(p / 0.34, 1));
+
+        /* C3. Bottom panel dissolve (p 0.20 → 0.52) */
+        const bOp = 1 - easeOut3(Math.min(Math.max((p - .2) / .32, 0), 1));
+        if (heroBottom) heroBottom.style.opacity = bOp;
+
+        /* C4. Background blush softens */
+        const blush = Math.max(0.12 - p * 0.095, 0.02);
+        document.querySelectorAll('.blush-glow').forEach(el => { el.style.opacity = blush; });
+
+        /* D. PER-CHARACTER ARCHITECTURAL SPLIT
+           Each letter opens independently.
+           The mouse parallax per letter uses its own --px-factor
+           (which is read inside the CSS background-position calc),
+           so we push mouseX/mouseY to the root CSS vars and
+           let the CSS vars do the per-letter offset math.
+           We only update --char-split-gap and --slot-opacity per unit.
+        */
+        charUnits.forEach((unit, idx) => {
+          const cp    = charP(p, idx);
+          const eased = easeOut3(cp);
+          const gap   = eased * MAX_GAP_VH * window.innerHeight;
+
+          unit.style.setProperty('--char-split-gap', gap.toFixed(2) + 'px');
+          unit.style.setProperty('--slot-opacity',   eased.toFixed(4));
+
+          /* Outer wrapper parallax — frozen once scroll begins */
+          if (window.innerWidth > 768) {
+            if (p < 0.04) {
+              const fx = (idx - 3) * 9;
+              const fy = (idx - 3) * 4.5;
+              unit.style.transform =
+                `translate3d(${(mouseX*fx).toFixed(2)}px,${(mouseY*fy).toFixed(2)}px,0)`;
+            } else {
+              unit.style.transform = 'translate3d(0,0,0)';
+            }
+          }
+        });
+
+        /* E. Next-section page turn (p 0.80 → 1.00) */
+        if (nextSection) {
+          const tP = Math.min(Math.max((p - .80) / .20, 0), 1);
+          nextSection.style.transform = `translateY(${((1 - easeInOutS(tP)) * 100).toFixed(2)}vh)`;
+          if (tP > 0.55) nextSection.classList.add('visible');
+          else           nextSection.classList.remove('visible');
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      tick();
+    });
+  </script>
+</body>
+</html>
