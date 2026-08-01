@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anwesha — UI/UX Design Director Portfolio</title>
+  <title>Anwesha &mdash; UI/UX Design Director Portfolio</title>
   <meta name="description" content="Anwesha's creative portfolio. UI/UX Design Director crafting intuitive digital experiences where beauty meets usability.">
 
   <!-- Premium Fonts -->
@@ -182,7 +182,7 @@
        Each .char-unit holds its own photo via --char-bg.
        background-size: cover + background-position: center top
        ensures the face/upper body fills the letter column.
-       background-attachment: local (NOT fixed) — each letter
+       background-attachment: local (NOT fixed) &mdash; each letter
        is an independent portrait window.
        ============================================================ */
     .masked-title {
@@ -243,20 +243,20 @@
       background-repeat: no-repeat;
     }
 
-    /* Top half — clipped to upper 50%, slides UP */
+    /* Top half &mdash; clipped to upper 50%, slides UP */
     .char-top {
       clip-path: inset(0 0 50% 0);
       transform: translateY(calc(-1 * var(--char-split-gap, 0px)));
     }
 
-    /* Bottom half — clipped to lower 50%, slides DOWN */
+    /* Bottom half &mdash; clipped to lower 50%, slides DOWN */
     .char-bottom {
       clip-path: inset(50% 0 0 0);
       transform: translateY(var(--char-split-gap, 0px));
     }
 
     /*
-      THE PORTRAIT WINDOW — expands between the two halves.
+      THE PORTRAIT WINDOW &mdash; expands between the two halves.
       Uses the same per-letter photo. Grows from 0 height to MAX_SPLIT_VH.
     */
     .char-slot {
@@ -319,7 +319,7 @@
     .btn-secondary:hover { background: var(--blush); border-color: var(--blush); }
 
     /* ============================================================
-       NEXT SECTION — magazine page-turn (Bridge to Ch 2)
+       NEXT SECTION &mdash; magazine page-turn (Bridge to Ch 2)
        ============================================================ */
     .next-section {
       position: relative; width: 100%; height: 100vh;
@@ -375,8 +375,8 @@
   <!-- Editorial grid lines -->
   <div class="grid-v"></div>
   <div class="grid-h"></div>
-  <div class="label-vertical">STUDIO ANWESHA © EDITORIAL PORTFOLIO v2.6</div>
-  <div class="label-coord">REF. 45° 25′ N / 75° 41′ W</div>
+  <div class="label-vertical">STUDIO ANWESHA Â© EDITORIAL PORTFOLIO v2.6</div>
+  <div class="label-coord">REF. 45Â° 25&prime; N / 75Â° 41&prime; W</div>
   <div class="label-edition">EST. 2026 // ISSUE 01</div>
   <div class="reg-mark">
     <svg viewBox="0 0 40 40">
@@ -387,7 +387,7 @@
   </div>
 
   <!-- ===========================================================
-       SCROLL TRACK — 250vh container that pins the hero
+       SCROLL TRACK &mdash; 250vh container that pins the hero
        =========================================================== -->
   <div class="scroll-track" id="scroll-track">
 
@@ -422,7 +422,7 @@
         </section>
 
         <!-- ===========================================================
-             ANWESHA — 7 SPLIT LETTER UNITS
+             ANWESHA &mdash; 7 SPLIT LETTER UNITS
              Each unit owns its own photo via --char-bg.
              --px-factor controls individual horizontal mouse parallax.
              =========================================================== -->
@@ -431,7 +431,7 @@
 
           <h1 class="masked-title" aria-label="ANWESHA">
 
-            <!-- A  — idx 0 -->
+            <!-- A  &mdash; idx 0 -->
             <span class="char-unit" data-idx="0"
               style="width:.72em; --char-bg: url('anwesha.png'); --px-factor: -1.4">
               <span class="char-part char-top">A</span>
@@ -439,7 +439,7 @@
               <span class="char-part char-bottom">A</span>
             </span>
 
-            <!-- N  — idx 1 -->
+            <!-- N  &mdash; idx 1 -->
             <span class="char-unit" data-idx="1"
               style="width:.72em; margin-left:-.05em; --char-bg: url('photo-n.jpg'); --px-factor: -0.8">
               <span class="char-part char-top">N</span>
@@ -447,7 +447,7 @@
               <span class="char-part char-bottom">N</span>
             </span>
 
-            <!-- W  — idx 2 -->
+            <!-- W  &mdash; idx 2 -->
             <span class="char-unit" data-idx="2"
               style="width:.94em; margin-left:-.06em; --char-bg: url('photo-w.jpg'); --px-factor: -0.3">
               <span class="char-part char-top">W</span>
@@ -455,7 +455,7 @@
               <span class="char-part char-bottom">W</span>
             </span>
 
-            <!-- E  — idx 3 — the CENTRE letter -->
+            <!-- E  &mdash; idx 3 &mdash; the CENTRE letter -->
             <span class="char-unit" data-idx="3"
               style="width:.66em; margin-left:-.04em; --char-bg: url('photo-e.jpg'); --px-factor: 0">
               <span class="char-part char-top">E</span>
@@ -463,7 +463,7 @@
               <span class="char-part char-bottom">E</span>
             </span>
 
-            <!-- S  — idx 4 -->
+            <!-- S  &mdash; idx 4 -->
             <span class="char-unit" data-idx="4"
               style="width:.67em; margin-left:-.05em; --char-bg: url('photo-s.jpg'); --px-factor: 0.3">
               <span class="char-part char-top">S</span>
@@ -471,7 +471,7 @@
               <span class="char-part char-bottom">S</span>
             </span>
 
-            <!-- H  — idx 5 -->
+            <!-- H  &mdash; idx 5 -->
             <span class="char-unit" data-idx="5"
               style="width:.72em; margin-left:-.04em; --char-bg: url('photo-h.jpg'); --px-factor: 0.8">
               <span class="char-part char-top">H</span>
@@ -479,7 +479,7 @@
               <span class="char-part char-bottom">H</span>
             </span>
 
-            <!-- A  — idx 6 — closing A -->
+            <!-- A  &mdash; idx 6 &mdash; closing A -->
             <span class="char-unit" data-idx="6"
               style="width:.72em; margin-left:-.06em; --char-bg: url('anwesha.png'); --px-factor: 1.4">
               <span class="char-part char-top">A</span>
@@ -510,7 +510,7 @@
     </div><!-- /hero-sticky -->
 
     <!-- ===========================================================
-         NEXT SECTION — magazine page-turn (Quiet Entry to Ch 2)
+         NEXT SECTION &mdash; magazine page-turn (Quiet Entry to Ch 2)
          =========================================================== -->
     <div class="next-section" id="next-section">
       <div class="next-inner" id="next-inner">
@@ -524,7 +524,7 @@
 
   <script>
     /* ===========================================================
-       ANWESHA PORTFOLIO — MASTER INTERACTION ENGINE
+       ANWESHA PORTFOLIO &mdash; MASTER INTERACTION ENGINE
        Pure Vanilla JS. requestAnimationFrame only. 60fps target.
        No GSAP. No libraries. No bounce. No overshoot.
        =========================================================== */
@@ -552,7 +552,7 @@
       let mouseX = 0, mouseY = 0;
       let scrollRaw = 0, scrollP = 0;
 
-      /* Inertia — 0.055 = soft-paper damping */
+      /* Inertia &mdash; 0.055 = soft-paper damping */
       const SCROLL_EASE = 0.055;
       const MOUSE_EASE  = 0.08;
 
@@ -568,7 +568,7 @@
       /* ---------------------------------------------------------
          VISUAL RHYTHM
          Centre letter (E, idx 3) leads. Outer A's follow last.
-         The stagger is barely perceptible — feels like breathing.
+         The stagger is barely perceptible &mdash; feels like breathing.
       --------------------------------------------------------- */
       const STAGGER = [0.00, 0.05, 0.09, 0.13, 0.09, 0.05, 0.00];
       const charP = (g, i) => {
@@ -577,7 +577,7 @@
       };
 
       /* ---------------------------------------------------------
-         SCROLL — passive, no jank
+         SCROLL &mdash; passive, no jank
          Active track = first 160vh of the 250vh scroll-track.
       --------------------------------------------------------- */
       const calcScroll = () =>
@@ -645,7 +645,7 @@
       }
 
       /* ---------------------------------------------------------
-         PAGE-LOAD ENTRANCE — staggered slide-up per letter
+         PAGE-LOAD ENTRANCE &mdash; staggered slide-up per letter
       --------------------------------------------------------- */
       charUnits.forEach((u, i) => {
         const delay = 0.20 + i * 0.072;
@@ -675,7 +675,7 @@
       if (nextSection) nextSection.style.transform = 'translateY(100vh)';
 
       /* ---------------------------------------------------------
-         MASTER ANIMATION TICK — all effects per rAF frame
+         MASTER ANIMATION TICK &mdash; all effects per rAF frame
       --------------------------------------------------------- */
       function tick() {
 
@@ -689,14 +689,14 @@
         scrollP += (scrollRaw - scrollP) * SCROLL_EASE;
         const p = scrollP;
 
-        /* C1. Micro-details dissolve (p 0 → 0.26) */
+        /* C1. Micro-details dissolve (p 0 &rarr; 0.26) */
         const mOp = 1 - easeOut3(Math.min(p / 0.26, 1));
         microEls.forEach(el => { el.style.opacity = mOp; });
 
-        /* C2. Navigation dissolve (p 0 → 0.34) */
+        /* C2. Navigation dissolve (p 0 &rarr; 0.34) */
         if (navBar) navBar.style.opacity = 1 - easeOut3(Math.min(p / 0.34, 1));
 
-        /* C3. Bottom panel dissolve (p 0.20 → 0.52) */
+        /* C3. Bottom panel dissolve (p 0.20 &rarr; 0.52) */
         const bOp = 1 - easeOut3(Math.min(Math.max((p - .2) / .32, 0), 1));
         if (heroBottom) heroBottom.style.opacity = bOp;
 
@@ -720,7 +720,7 @@
           unit.style.setProperty('--char-split-gap', gap.toFixed(2) + 'px');
           unit.style.setProperty('--slot-opacity',   eased.toFixed(4));
 
-          /* Outer wrapper parallax — frozen once scroll begins */
+          /* Outer wrapper parallax &mdash; frozen once scroll begins */
           if (window.innerWidth > 768) {
             if (p < 0.04) {
               const fx = (idx - 3) * 9;
@@ -733,7 +733,7 @@
           }
         });
 
-        /* E. Next-section page turn (p 0.80 → 1.00) */
+        /* E. Next-section page turn (p 0.80 &rarr; 1.00) */
         if (nextSection) {
           const tP = Math.min(Math.max((p - .80) / .20, 0), 1);
           nextSection.style.transform = `translateY(${((1 - easeInOutS(tP)) * 100).toFixed(2)}vh)`;
@@ -749,18 +749,18 @@
   </script>
 
   <!-- ===========================================================
-       CHAPTER 02 — THE MANIFESTO (Quiet Edition)
+       CHAPTER 02 &mdash; THE MANIFESTO (Quiet Edition)
        =========================================================== -->
   <style>
     .manifesto-section {
       position: relative;
       background: #150F17; /* Deep, matte, soft editorial plum */
       height: 250vh;
-      overflow: hidden;
+      overflow: clip;
     }
 
     /* Subtle paper noise texture for the manifesto section */
-    .manifesto-section::before {
+    .manifesto-sticky::before {
       content: '';
       position: absolute;
       inset: 0;
@@ -784,13 +784,15 @@
     /* Roving soft light effect across the paper */
     .manifesto-spotlight {
       position: absolute;
+      left: 0; top: 0;
       width: 80vmax;
       height: 80vmax;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(245, 196, 215, 0.035) 0%, rgba(232, 175, 194, 0.01) 50%, transparent 80%);
       pointer-events: none;
       z-index: 2;
-      transform: translate(-50%, -50%);
+      transform: translate3d(-50%, -50%, 0);
+      will-change: transform;
     }
 
     /* Giant Background Word */
@@ -972,7 +974,7 @@
       <!-- Small editorial details -->
       <div class="m-detail m-detail-tl js-m-detail">CHAPTER 02</div>
       <div class="m-detail m-detail-tr js-m-detail">Est. 2026 // Editorial Notes</div>
-      <div class="m-detail m-detail-bl js-m-detail">Issue 01 &nbsp;·&nbsp; Philosophy</div>
+      <div class="m-detail m-detail-bl js-m-detail">Issue 01 &nbsp;&middot;&nbsp; Philosophy</div>
       <div class="m-detail m-detail-br js-m-detail">Page 08</div>
       
       <!-- The main manifesto content -->
@@ -987,7 +989,7 @@
       <div class="selected-work-bridge" id="m-bridge">
         <div class="bridge-line"></div>
         <h3 class="bridge-title">SELECTED WORK</h3>
-        <div class="bridge-sub">Chapter 03 &nbsp;·&nbsp; Case Studies</div>
+        <div class="bridge-sub">Chapter 03 &nbsp;&middot;&nbsp; Case Studies</div>
       </div>
       
     </div>
@@ -1019,8 +1021,7 @@
         sX += (mouseX - sX) * 0.05;
         sY += (mouseY - sY) * 0.05;
         if (spotlight) {
-          spotlight.style.left = `${sX}px`;
-          spotlight.style.top = `${sY}px`;
+          spotlight.style.transform = `translate3d(${sX}px, ${sY}px, 0) translate(-50%, -50%)`;
         }
         requestAnimationFrame(updateSpotlight);
       }
@@ -1097,6 +1098,2317 @@
 
       tick();
     });
+  </script>
+
+  <!-- ===========================================================
+       CHAPTER 03 &mdash; SELECTED WORKS
+       Three real editorial case studies.
+       LumenXo &middot; Mitra Ventures &middot; KhaoFit
+       =========================================================== -->
+  <style>
+    /* ---- Section Shell ---- */
+    .works-section {
+      position: relative;
+      background: #FCF7F5;
+      height: 430vh;
+      /*
+        CRITICAL: overflow:clip (not hidden) — clips visually without
+        creating a new scroll container. overflow:hidden breaks
+        position:sticky on .works-sticky.
+      */
+      overflow: clip;
+      z-index: 5;
+    }
+    .works-sticky::before {
+      content: '';
+      position: absolute; inset: 0;
+      z-index: 1; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
+    }
+
+    /* ---- Sticky viewport ---- */
+    .works-sticky {
+      position: sticky; top: 0;
+      height: 100vh; width: 100%;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; z-index: 2;
+    }
+
+    /* ---- Soft roving spotlight ---- */
+    .works-spotlight {
+      position: absolute;
+      left: 0; top: 0;
+      width: 90vmax; height: 90vmax; border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,196,215,.07) 0%, rgba(232,175,194,.01) 50%, transparent 80%);
+      pointer-events: none; z-index: 2;
+      transform: translate3d(-50%, -50%, 0);
+      will-change: transform;
+    }
+
+    /* ---- Ghost background word ---- */
+    .works-bg-word {
+      position: absolute;
+      font-family: var(--serif); font-weight: 900;
+      font-size: 28vw; color: var(--charcoal);
+      opacity: 0.024;
+      text-transform: uppercase; letter-spacing: -0.02em;
+      line-height: 1; pointer-events: none; z-index: 2;
+      user-select: none; white-space: nowrap;
+      left: 50%; top: 50%;
+      transform: translate3d(-50%,-50%,0);
+      transition: opacity 0.7s ease;
+    }
+
+    /* ---- Persistent editorial micro-details ---- */
+    .w-detail {
+      position: absolute;
+      font-family: var(--sans); font-size: .57rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .2em;
+      color: var(--mauve); opacity: .55; z-index: 6;
+    }
+    .w-detail-tl { top: 46px; left: 6%; }
+    .w-detail-tr {
+      top: 46px; right: 6%;
+      font-family: var(--editorial); font-style: italic;
+      text-transform: none; font-size: 1rem; letter-spacing: 0;
+      opacity: .45; color: var(--charcoal);
+    }
+    .w-detail-bl { bottom: 46px; left: 6%; }
+    .w-detail-br { bottom: 46px; right: 6%; }
+
+    .w-divider-v {
+      position: absolute; left: 4.5%; top: 96px; bottom: 96px;
+      width: .5px; background: rgba(38,38,38,.06); z-index: 3;
+    }
+
+    /* ---- Spread: one project per full viewport ---- */
+    .project-spread {
+      position: absolute; inset: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 90px 8% 90px 8%;
+      gap: 4vw;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 3;
+      transform: translateY(28px);
+      will-change: opacity, transform;
+    }
+    .project-spread.revealed {
+      opacity: 1; transform: translateY(0); pointer-events: auto;
+    }
+
+    /* Left-heavy composition for 01 and 03 */
+    .spread-l { grid-template-columns: 1.1fr 0.9fr; }
+    /* Right-heavy composition for 02 &mdash; image left, text right */
+    .spread-r { grid-template-columns: 0.9fr 1.1fr; }
+    .spread-r .p-text  { order: 2; padding-left: 4vw; padding-right: 0; }
+    .spread-r .p-image { order: 1; justify-content: flex-start; }
+
+    /* ---- Text column ---- */
+    .p-text {
+      display: flex; flex-direction: column;
+      align-items: flex-start;
+      padding-right: 3vw;
+      z-index: 4;
+    }
+
+    /* Editorial number label */
+    .p-num {
+      font-family: var(--editorial); font-style: italic;
+      font-size: 3.8rem; line-height: 1; font-weight: 400;
+      color: var(--mauve); opacity: .35;
+      margin-bottom: -6px;
+    }
+
+    /* Industry tag */
+    .p-industry {
+      font-family: var(--sans); font-size: .58rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .22em;
+      color: var(--plum); opacity: .7;
+      margin-bottom: 18px; margin-top: 4px;
+    }
+
+    /* Project / Company name */
+    .p-title {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(2rem, 3.8vw, 4.2rem);
+      line-height: .96; text-transform: uppercase;
+      letter-spacing: -.04em;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+    }
+
+    /* Thin rule separating name from editorial copy */
+    .p-rule {
+      width: 36px; height: .5px;
+      background: rgba(101,68,92,.4);
+      margin-bottom: 20px;
+    }
+
+    /* Challenge / editorial copy */
+    .p-challenge {
+      font-family: var(--editorial);
+      font-size: 1.35rem; line-height: 1.5; font-weight: 400;
+      color: var(--charcoal); opacity: .82;
+      margin-bottom: 24px;
+      max-width: 440px;
+    }
+
+    /* Role / duration / dates row */
+    .p-meta {
+      display: flex; gap: 28px;
+      border-top: .5px solid rgba(38,38,38,.1);
+      padding-top: 18px;
+      margin-bottom: 26px;
+      width: 100%; max-width: 440px;
+    }
+    .p-meta-col { display: flex; flex-direction: column; gap: 3px; }
+    .p-meta-lbl {
+      font-family: var(--sans); font-size: .5rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .15em; color: var(--mauve);
+    }
+    .p-meta-val {
+      font-family: var(--sans); font-size: .62rem; font-weight: 500;
+      color: var(--charcoal); opacity: .78;
+    }
+
+    /* CTA link */
+    .p-cta {
+      font-family: var(--sans); font-size: .62rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .15em;
+      color: var(--plum); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      cursor: none; transition: opacity .3s;
+    }
+    .p-cta::after {
+      content: '&rarr;';
+      display: inline-block;
+      transition: transform .3s;
+    }
+    .p-cta:hover { opacity: .7; }
+    .p-cta:hover::after { transform: translateX(5px); }
+
+    /* ---- Image column ---- */
+    .p-image {
+      display: flex; justify-content: flex-end; align-items: center;
+      width: 100%; height: 100%; z-index: 3;
+    }
+    .p-mockup {
+      position: relative;
+      width: 94%; max-width: 500px;
+      will-change: transform;
+    }
+    .p-mockup img {
+      width: 100%; height: auto; max-height: 72vh;
+      object-fit: contain; border-radius: 6px;
+      filter: drop-shadow(0 24px 48px rgba(101,68,92,.09));
+    }
+
+    /* ---- Closing bridge ---- */
+    .works-closing {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      opacity: 0; pointer-events: none; z-index: 4;
+      transform: translateY(22px);
+      padding: 0 12%;
+    }
+    .works-closing.revealed {
+      opacity: 1; transform: translateY(0); pointer-events: auto;
+    }
+    .closing-quote {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(2rem, 4vw, 4.4rem);
+      text-transform: uppercase; text-align: center;
+      color: var(--charcoal);
+      line-height: 1.12; letter-spacing: -.03em;
+      max-width: 72vw;
+    }
+    .closing-meta {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 14px; margin-top: 38px;
+    }
+    .closing-chapter {
+      font-family: var(--sans); font-size: .58rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .22em; color: var(--mauve);
+    }
+    .closing-rule {
+      width: 1px; height: 48px;
+      background: rgba(38,38,38,.15);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 1024px) {
+      .p-title { font-size: clamp(1.8rem, 4.5vw, 3.6rem); }
+      .p-challenge { font-size: 1.2rem; }
+    }
+    @media (max-width: 768px) {
+      .works-section { height: auto; padding-bottom: 12vh; }
+      .works-sticky { position: relative; height: auto; display: block; }
+      .project-spread {
+        position: relative; display: flex; flex-direction: column;
+        padding: 100px 6% 60px; opacity: 1 !important; transform: none !important;
+        gap: 40px;
+      }
+      .spread-r .p-text, .spread-r .p-image { order: unset; padding: 0; }
+      .p-image { justify-content: center; }
+      .p-mockup { width: 100%; max-width: 380px; }
+      .p-title { font-size: 10vw; }
+      .p-challenge { font-size: 1.35rem; }
+      .works-bg-word, .w-divider-v, .w-detail, .works-spotlight { display: none; }
+      .works-closing {
+        position: relative; padding: 80px 6% 60px;
+        opacity: 1 !important; transform: none !important;
+      }
+      .closing-quote { font-size: 8vw; max-width: 90vw; }
+    }
+  </style>
+
+  <section class="works-section" id="works-sec">
+    <div class="works-sticky" id="works-sticky">
+
+      <!-- Spotlight -->
+      <div class="works-spotlight" id="w-spotlight"></div>
+
+      <!-- Ghost background word &mdash; changes per project -->
+      <div class="works-bg-word" id="w-bg-word">CRAFT</div>
+
+      <!-- Persistent editorial chrome -->
+      <div class="w-divider-v"></div>
+      <div class="w-detail w-detail-tl">Chapter 03 &nbsp;&middot;&nbsp; Selected Works</div>
+      <div class="w-detail w-detail-tr">Studio Anwesha // Issue 01</div>
+      <div class="w-detail w-detail-bl">Editorial Case Studies</div>
+      <div class="w-detail w-detail-br">Page 14</div>
+
+      <!-- ================================================================
+           01 &mdash; LUMENXO SOFTWARE PVT. LTD.
+           Industry: Enterprise Digital Products (Multiple Industries)
+           ================================================================ -->
+      <div class="project-spread spread-l revealed" id="spread-01">
+
+        <div class="p-text">
+          <span class="p-num">01</span>
+          <span class="p-industry">Enterprise Software &nbsp;&middot;&nbsp; Multi-Industry</span>
+          <h3 class="p-title">LumenXo<br>Software</h3>
+          <div class="p-rule"></div>
+          <p class="p-challenge">
+            When products serve many industries, every interface must
+            speak clearly to each audience. The challenge was
+            translating complex business requirements into
+            experiences that felt inevitable &mdash; not engineered.
+          </p>
+          <div class="p-meta">
+            <div class="p-meta-col">
+              <span class="p-meta-lbl">Role</span>
+              <span class="p-meta-val">UI/UX Designer</span>
+            </div>
+            <div class="p-meta-col">
+              <span class="p-meta-lbl">Period</span>
+              <span class="p-meta-val">Nov 2024 &ndash; Present</span>
+            </div>
+            <div class="p-meta-col">
+              <span class="p-meta-lbl">Tools</span>
+              <span class="p-meta-val">Figma</span>
+            </div>
+          </div>
+          <a href="#lumenxo-case" class="p-cta">Explore Case Study</a>
+        </div>
+
+        <div class="p-image">
+          <div class="p-mockup js-parallax" data-depth="5">
+            <img src="lumenxo.png"
+                 alt="LumenXo enterprise web and mobile interface design">
+          </div>
+        </div>
+
+      </div><!-- /spread-01 -->
+
+      <!-- ================================================================
+           02 &mdash; MITRA VENTURES
+           Industry: Automotive / Vehicle-Focused Digital Platform
+           ================================================================ -->
+      <div class="project-spread spread-r" id="spread-02">
+
+        <div class="p-text">
+          <span class="p-num">02</span>
+          <span class="p-industry">Automotive &nbsp;&middot;&nbsp; Vehicle Management Platform</span>
+          <h3 class="p-title">Mitra<br>Ventures</h3>
+          <div class="p-rule"></div>
+          <p class="p-challenge">
+            A modern vehicle platform demands an interface as
+            capable as the machines it manages. The design
+            prioritised clear navigation hierarchies, responsive
+            layouts, and visual consistency through reusable
+            components &mdash; making complexity feel effortless.
+          </p>
+          <div class="p-meta">
+            <div class="p-meta-col">
+              <span class="p-meta-lbl">Role</span>
+              <span class="p-meta-val">UI/UX Designer</span>
+            </div>
+            <div class="p-meta-col">
+              <span class="p-meta-lbl">Period</span>
+              <span class="p-meta-val">Aug &ndash; Sep 2025</span>
+            </div>
+            <div class="p-meta-col">
+              <span class="p-meta-lbl">Tools</span>
+              <span class="p-meta-val">Figma</span>
+            </div>
+          </div>
+          <a href="#mitra-case" class="p-cta">Explore Case Study</a>
+        </div>
+
+        <div class="p-image">
+          <div class="p-mockup js-parallax" data-depth="-5">
+            <img src="Mitra ventures.png"
+                 alt="Mitra Ventures vehicle management dashboard UI">
+          </div>
+        </div>
+
+      </div><!-- /spread-02 -->
+
+      <!-- ================================================================
+           03 &mdash; KHAOFIT
+           Industry: Health & Food Technology
+           ================================================================ -->
+      <div class="project-spread spread-l" id="spread-03">
+
+        <div class="p-text">
+          <span class="p-num">03</span>
+          <span class="p-industry">Health &amp; Food Technology &nbsp;&middot;&nbsp; Mobile Platform</span>
+          <h3 class="p-title">KhaoFit</h3>
+          <div class="p-rule"></div>
+          <p class="p-challenge">
+            Healthy decisions are deeply personal. KhaoFit called for
+            an experience where BMI, dietary preferences and fitness
+            goals translated into meal recommendations that felt
+            conversational &mdash; not clinical. The interface had to make
+            nutrition feel approachable.
+          </p>
+          <div class="p-meta">
+            <div class="p-meta-col">
+              <span class="p-meta-lbl">Role</span>
+              <span class="p-meta-val">UI/UX Designer</span>
+            </div>
+            <div class="p-meta-col">
+              <span class="p-meta-lbl">Period</span>
+              <span class="p-meta-val">Sep &ndash; Oct 2024</span>
+            </div>
+            <div class="p-meta-col">
+              <span class="p-meta-lbl">Tools</span>
+              <span class="p-meta-val">Figma</span>
+            </div>
+          </div>
+          <a href="#khaofit-case" class="p-cta">Explore Case Study</a>
+        </div>
+
+        <div class="p-image">
+          <div class="p-mockup js-parallax" data-depth="4">
+            <img src="khaofit.png"
+                 alt="KhaoFit health food delivery mobile app screens">
+          </div>
+        </div>
+
+      </div><!-- /spread-03 -->
+
+      <!-- ================================================================
+           CLOSING BRIDGE &rarr; CHAPTER 04
+           ================================================================ -->
+      <div class="works-closing" id="w-closing">
+        <p class="closing-quote">
+          Every interface begins<br>where understanding ends.
+        </p>
+        <div class="closing-meta">
+          <span class="closing-chapter">Chapter 04 &nbsp;&middot;&nbsp; Behind the Process</span>
+          <div class="closing-rule"></div>
+        </div>
+      </div>
+
+    </div><!-- /works-sticky -->
+  </section><!-- /works-sec -->
+
+
+  <script>
+    /* ===========================================================
+       CHAPTER 03 &mdash; SELECTED WORKS SCROLL ENGINE
+       Isolated IIFE. Does not touch the hero engine.
+
+       Scroll timeline (section is 430vh, sticky = 100vh):
+         p 0.00 &ndash; 0.25  Spread 01 (LumenXo) visible
+         p 0.25 &ndash; 0.35  Cross-dissolve 01 &rarr; 02
+         p 0.35 &ndash; 0.58  Spread 02 (Mitra) visible
+         p 0.58 &ndash; 0.68  Cross-dissolve 02 &rarr; 03
+         p 0.68 &ndash; 0.87  Spread 03 (KhaoFit) visible
+         p 0.87 &ndash; 0.93  Spread 03 exits
+         p 0.91 &ndash; 1.00  Closing bridge fades in
+    =========================================================== */
+    (function () {
+      const sec      = document.getElementById('works-sec');
+      if (!sec) return;
+
+      const spotlight = document.getElementById('w-spotlight');
+      const bgWord    = document.getElementById('w-bg-word');
+      const s01       = document.getElementById('spread-01');
+      const s02       = document.getElementById('spread-02');
+      const s03       = document.getElementById('spread-03');
+      const closing   = document.getElementById('w-closing');
+      const parallaxEls = document.querySelectorAll('.js-parallax');
+
+      /* -- Spotlight mouse tracking (very slow lerp) -- */
+      let mX = window.innerWidth  / 2;
+      let mY = window.innerHeight / 2;
+      let sX = mX, sY = mY;
+
+      window.addEventListener('mousemove', e => {
+        mX = e.clientX;
+        mY = e.clientY;
+      }, { passive: true });
+
+      /* -- Mockup parallax mouse vars -- */
+      let normX = 0, normY = 0;
+      let lNX = 0, lNY = 0;
+      const MOUSE_LERP = 0.07;
+
+      window.addEventListener('mousemove', e => {
+        normX = (e.clientX / window.innerWidth)  - 0.5;
+        normY = (e.clientY / window.innerHeight) - 0.5;
+      }, { passive: true });
+
+      /* -- Scroll progress -- */
+      function progress() {
+        const r = sec.getBoundingClientRect();
+        return Math.min(Math.max(-r.top / (sec.offsetHeight - window.innerHeight), 0), 1);
+      }
+
+      /* -- Easing helpers -- */
+      const lerp    = (a, b, t) => a + (b - a) * t;
+      const clamp01 = (v)       => Math.min(Math.max(v, 0), 1);
+      const range   = (p, a, b) => clamp01((p - a) / (b - a));
+
+      /* -- Background word data -- */
+      const WORDS = ['CRAFT', 'DRIVE', 'NOURISH', 'PROCESS'];
+      let currentWordIdx = -1;
+      let wordFading = false;
+
+      function setWord(idx) {
+        if (idx === currentWordIdx || wordFading) return;
+        wordFading = true;
+        currentWordIdx = idx;
+        if (bgWord) {
+          bgWord.style.opacity = 0;
+          setTimeout(() => {
+            bgWord.textContent = WORDS[idx];
+            bgWord.style.opacity = 0.024;
+            wordFading = false;
+          }, 500);
+        }
+      }
+
+      /* -- Apply spread visibility -- */
+      function applySpread(el, op) {
+        if (!el) return;
+        el.style.opacity = op;
+        /* Subtly drift up as opacity falls */
+        const drift = (1 - op) * 24;
+        el.style.transform = op > 0
+          ? `translateY(${-drift}px)`
+          : `translateY(24px)`;
+        el.style.pointerEvents = op > 0.5 ? 'auto' : 'none';
+      }
+
+      /* ---- MAIN TICK ---- */
+      function tick() {
+
+        /* Spotlight */
+        sX = lerp(sX, mX, 0.05);
+        sY = lerp(sY, mY, 0.05);
+        if (spotlight) {
+          spotlight.style.transform = `translate3d(${sX.toFixed(1)}px, ${sY.toFixed(1)}px, 0) translate(-50%, -50%)`;
+        }
+
+        /* Mockup parallax */
+        lNX = lerp(lNX, normX, MOUSE_LERP);
+        lNY = lerp(lNY, normY, MOUSE_LERP);
+        parallaxEls.forEach(el => {
+          const d = parseFloat(el.dataset.depth) || 5;
+          el.style.transform =
+            `translate3d(${(lNX * d * 6).toFixed(2)}px, ${(lNY * d * 4).toFixed(2)}px, 0)`;
+        });
+
+        /* Scroll */
+        const p = progress();
+
+        /* ------ Opacity per spread ------ */
+        // Spread 01: full from 0.00 &rarr; 0.25, fades out 0.25 &rarr; 0.35
+        const op1 = p < 0.25
+          ? 1
+          : 1 - range(p, 0.25, 0.35);
+        applySpread(s01, op1);
+
+        // Spread 02: fades in 0.25 &rarr; 0.35, full 0.35 &rarr; 0.58, fades 0.58 &rarr; 0.68
+        const op2a = range(p, 0.25, 0.35);
+        const op2b = 1 - range(p, 0.58, 0.68);
+        const op2  = Math.min(op2a, op2b);
+        applySpread(s02, op2);
+
+        // Spread 03: fades in 0.58 &rarr; 0.68, full 0.68 &rarr; 0.87, fades 0.87 &rarr; 0.93
+        const op3a = range(p, 0.58, 0.68);
+        const op3b = 1 - range(p, 0.87, 0.93);
+        const op3  = Math.min(op3a, op3b);
+        applySpread(s03, op3);
+
+        // Closing: fades in 0.90 &rarr; 1.00
+        const opC = range(p, 0.90, 1.00);
+        if (closing) {
+          closing.style.opacity = opC;
+          closing.style.transform = `translateY(${(1 - opC) * 20}px)`;
+          closing.style.pointerEvents = opC > 0.5 ? 'auto' : 'none';
+        }
+
+        /* ------ Background word sync ------ */
+        if (p < 0.30)      setWord(0);
+        else if (p < 0.62) setWord(1);
+        else if (p < 0.90) setWord(2);
+        else               setWord(3);
+
+        /* ------ Background word parallax ------ */
+        if (bgWord) {
+          const transY = (p - 0.5) * -50;
+          bgWord.style.transform =
+            `translate3d(-50%, calc(-50% + ${transY.toFixed(1)}px), 0)`;
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      tick();
+    })();
+  </script>
+  <!-- ===========================================================
+       CHAPTER 04 — THE EDIT (Observations on Form & Function)
+       =========================================================== -->
+  <style>
+    .edit-section {
+      position: relative;
+      background: #150F17; /* Deep matte plum background */
+      height: 420vh; /* Scroll runway */
+      overflow: clip;
+      z-index: 6;
+      color: #F0E6DF; /* Light warm ivory text */
+    }
+
+    .edit-sticky {
+      position: sticky; top: 0;
+      height: 100vh; width: 100%;
+      display: flex; align-items: center; justify-content: center;
+      overflow: clip; z-index: 2;
+    }
+
+    .edit-sticky::before {
+      content: '';
+      position: absolute; inset: 0;
+      z-index: 1; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+    }
+
+    .edit-spotlight {
+      position: absolute;
+      left: 0; top: 0;
+      width: 80vmax; height: 80vmax; border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 196, 215, 0.035) 0%, rgba(232, 175, 194, 0.01) 50%, transparent 80%);
+      pointer-events: none; z-index: 2;
+      transform: translate3d(-50%, -50%, 0);
+      will-change: transform;
+    }
+
+    .edit-bg-word {
+      position: absolute;
+      font-family: var(--serif); font-weight: 900;
+      font-size: 28vw; color: #F0E6DF;
+      opacity: 0.012;
+      text-transform: uppercase; letter-spacing: -0.02em;
+      line-height: 1; pointer-events: none; z-index: 2;
+      user-select: none; white-space: nowrap;
+      left: 50%; top: 50%;
+      transform: translate3d(-50%,-50%,0);
+      transition: opacity 0.7s ease;
+    }
+
+    /* Persistent editorial chrome */
+    .e-detail {
+      position: absolute;
+      font-family: var(--sans); font-size: .57rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .2em;
+      color: rgba(240, 230, 223, 0.4); z-index: 6;
+    }
+    .e-detail-tl { top: 46px; left: 6%; }
+    .e-detail-tr {
+      top: 46px; right: 6%;
+      font-family: var(--editorial); font-style: italic;
+      text-transform: none; font-size: 1rem; letter-spacing: 0;
+      opacity: .45; color: #F0E6DF;
+    }
+    .e-detail-bl { bottom: 46px; left: 6%; }
+    .e-detail-br { bottom: 46px; right: 6%; }
+
+    .e-divider-v {
+      position: absolute; left: 4.5%; top: 96px; bottom: 96px;
+      width: .5px; background: rgba(240, 230, 223, .06); z-index: 3;
+    }
+
+    /* Spreads layout */
+    .edit-spread {
+      position: absolute; inset: 0;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      padding: 90px 8% 90px 8%;
+      gap: 5vw;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 3;
+      transform: translateY(28px);
+      will-change: opacity, transform;
+    }
+
+    /* Alternating layout for spread II */
+    .edit-spread-alt {
+      grid-template-columns: 0.9fr 1.1fr;
+    }
+    .edit-spread-alt .e-text { order: 2; padding-left: 4vw; }
+    .edit-spread-alt .e-visual { order: 1; justify-content: flex-start; }
+
+    /* Type A: Typography dominant — text gets 60%, visual 40% and is de-emphasized */
+    .edit-spread-type-a {
+      grid-template-columns: 1.4fr 0.6fr;
+      align-items: center;
+    }
+    .edit-spread-type-a .e-visual { align-items: flex-end; }
+
+    /* Type B: Visual dominant — tiny text left, large visual right */
+    .edit-spread-type-b {
+      grid-template-columns: 0.32fr 1.68fr;
+      align-items: center;
+    }
+    .edit-spread-type-b .e-text { padding-right: 0; border-right: 0.5px solid rgba(240,230,223,0.08); padding-right: 2vw; }
+
+    /* Type C: Centered single-column pull-quote — no grid */
+    .edit-spread-type-c {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: none;
+      padding: 10vh 12%;
+    }
+
+    /* New content elements */
+
+    /* Giant display word (Spread 01) */
+    .e-display-word {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(4rem, 9vw, 9.5rem);
+      line-height: 0.9; text-transform: uppercase;
+      letter-spacing: -0.05em;
+      color: #F0E6DF;
+      margin-bottom: 20px;
+    }
+
+    /* Single short line beneath display word */
+    .e-one-liner {
+      font-family: var(--editorial); font-style: italic;
+      font-size: 1.35rem; line-height: 1.4; font-weight: 400;
+      color: rgba(240, 230, 223, 0.65);
+      max-width: 380px;
+    }
+
+    /* Tiny caption for visual-dominant spread */
+    .e-micro-caption {
+      font-family: var(--editorial); font-style: italic;
+      font-size: 1.05rem; line-height: 1.5; font-weight: 400;
+      color: rgba(240, 230, 223, 0.55);
+      margin-top: 12px;
+    }
+
+    /* Minor text column (Spread 02) */
+    .e-text-minor {
+      display: flex; flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .e-text-minor .e-num { font-size: 2.8rem; margin-bottom: 8px; }
+    .e-text-minor .e-category { font-size: 0.5rem; }
+
+    /* Large centered pull-quote block (Spread 03) */
+    .e-pull-quote-block {
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+      max-width: 680px;
+    }
+    .e-pull-quote-block .e-num {
+      font-size: 2.8rem; margin-bottom: 28px;
+      align-self: flex-start;
+    }
+    .e-pull-quote {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(3.5rem, 7vw, 8rem);
+      line-height: 0.97; text-transform: uppercase;
+      letter-spacing: -0.04em;
+      color: #F0E6DF;
+      margin: 0 0 36px 0;
+    }
+
+    /* Platform name row below pull-quote */
+    .e-platform-row {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 20px;
+    }
+    .e-platform-label {
+      font-family: var(--sans); font-size: 0.65rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.2em;
+      color: rgba(240, 230, 223, 0.5);
+    }
+    .e-platform-divider {
+      width: 24px; height: 0.5px;
+      background: rgba(240, 230, 223, 0.2);
+    }
+
+    /* Micro editorial note (below platform row) */
+    .e-micro-note {
+      font-family: var(--sans); font-size: 0.5rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.18em;
+      color: rgba(240, 230, 223, 0.28);
+    }
+
+    /* Visual sizing variants */
+    .vis-container-sm {
+      max-width: 280px;
+    }
+    .vis-container-lg {
+      max-width: 100%;
+      height: 70vh;
+      max-height: 520px;
+    }
+    .e-visual-dominant {
+      justify-content: flex-end;
+      align-items: stretch;
+    }
+    .e-visual-secondary {
+      justify-content: flex-end;
+      align-items: center;
+      opacity: 0.7;
+    }
+
+    /* Add third blueprint box reference */
+    #bp-box-3 {
+      position: absolute;
+      border: 0.5px solid rgba(240, 230, 223, 0.2);
+      background: rgba(240, 230, 223, 0.01);
+      border-radius: 2px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+    }
+    #bp-box-3::after {
+      content: attr(data-label);
+      position: absolute; bottom: -18px; left: 0;
+      font-family: var(--sans); font-size: 0.45rem; font-weight: 500;
+      letter-spacing: 0.05em; color: var(--mauve); opacity: 0.8;
+    }
+    #bp-box-3.bp-active { opacity: 1; transform: translateY(0); }
+
+    /* Refined closing prelude — personal, short, large */
+    .edit-closing-prelude {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(2.8rem, 6vw, 7rem);
+      text-transform: uppercase; text-align: center;
+      color: #F0E6DF;
+      line-height: 0.95; letter-spacing: -0.04em;
+      margin-bottom: 0;
+    }
+
+
+    .e-text {
+      display: flex; flex-direction: column;
+      align-items: flex-start;
+      padding-right: 2vw;
+      z-index: 4;
+    }
+
+    .e-num {
+      font-family: var(--editorial); font-style: italic;
+      font-size: 3.8rem; line-height: 1; font-weight: 400;
+      color: rgba(240, 230, 223, 0.2);
+      margin-bottom: -6px;
+    }
+
+    .e-category {
+      font-family: var(--sans); font-size: .58rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .22em;
+      color: var(--mauve); opacity: .7;
+      margin-bottom: 18px; margin-top: 4px;
+    }
+
+    .e-title {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(2rem, 3.8vw, 4.2rem);
+      line-height: .96; text-transform: uppercase;
+      letter-spacing: -.03em;
+      color: #F0E6DF;
+      margin-bottom: 24px;
+    }
+
+    .e-reflection {
+      font-family: var(--editorial);
+      font-size: 1.35rem; line-height: 1.55; font-weight: 400;
+      color: rgba(240, 230, 223, 0.85);
+      max-width: 440px;
+    }
+
+    .e-visual {
+      display: flex; justify-content: center; align-items: center;
+      width: 100%; height: 100%; z-index: 3;
+    }
+
+    /* Abstract Visual Compositions */
+    .vis-container {
+      position: relative;
+      width: 100%; max-width: 440px; aspect-ratio: 1.2;
+      background: rgba(240, 230, 223, 0.02);
+      border: 0.5px solid rgba(240, 230, 223, 0.08);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    /* Visual 1: The Quiet Path (User Flow Vector) */
+    .vis-quiet-grid {
+      position: absolute; inset: 0;
+      background-image: 
+        linear-gradient(rgba(240, 230, 223, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240, 230, 223, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: center;
+    }
+    .vis-quiet-path {
+      position: absolute; inset: 0;
+      padding: 30px;
+    }
+    .vis-quiet-path svg {
+      width: 100%; height: 100%;
+    }
+    .flow-line {
+      stroke: var(--mauve);
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      will-change: stroke-dashoffset;
+    }
+    .flow-node {
+      fill: #150F17;
+      stroke: var(--cream);
+      stroke-width: 2;
+      opacity: 0;
+      transform: scale(0.5);
+      transform-origin: center;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .flow-node-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Visual 2: Grid and Cohesion */
+    .vis-grid-baseline {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; justify-content: space-around;
+      padding: 40px 0;
+    }
+    .grid-line-h {
+      width: 100%; height: 0.5px;
+      background: rgba(240, 230, 223, 0.05);
+    }
+    .vis-grid-cols {
+      position: absolute; inset: 0;
+      display: flex; justify-content: space-around;
+      padding: 0 40px;
+    }
+    .grid-col-v {
+      width: 0.5px; height: 100%;
+      background: rgba(240, 230, 223, 0.05);
+    }
+    .blueprint-box {
+      position: absolute;
+      border: 0.5px solid rgba(240, 230, 223, 0.2);
+      background: rgba(240, 230, 223, 0.01);
+      border-radius: 2px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .blueprint-box::after {
+      content: attr(data-label);
+      position: absolute; bottom: -18px; left: 0;
+      font-family: var(--sans); font-size: 0.45rem; font-weight: 500;
+      letter-spacing: 0.05em; color: var(--mauve); opacity: 0.8;
+    }
+    .bp-active {
+      opacity: 1; transform: translateY(0);
+    }
+    .vis-grid-coords {
+      position: absolute; top: 12px; right: 12px;
+      font-family: var(--sans); font-size: 0.48rem;
+      color: rgba(240, 230, 223, 0.3); letter-spacing: 0.05em;
+    }
+
+    /* Visual 3: Responsive transformation */
+    .vis-responsive-container {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .device-outline {
+      position: absolute;
+      border: 0.5px solid rgba(240, 230, 223, 0.15);
+      background: rgba(15, 10, 16, 0.6);
+      border-radius: 4px;
+      transition: border-color 0.8s ease, transform 0.8s ease, opacity 0.8s ease;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    .device-desktop {
+      width: 260px; height: 160px;
+      z-index: 2;
+    }
+    .device-tablet {
+      width: 170px; height: 110px;
+      z-index: 3;
+      transform: scale(0.9) translate3d(20px, 20px, 0);
+    }
+    .device-mobile {
+      width: 80px; height: 130px;
+      z-index: 4;
+      transform: scale(0.9) translate3d(-40px, 30px, 0);
+    }
+    .device-active {
+      opacity: 1;
+      transform: scale(1) translate3d(0, 0, 0) !important;
+      border-color: rgba(240, 230, 223, 0.35);
+    }
+    .device-inner {
+      position: absolute; inset: 8px;
+      border: 0.5px solid rgba(240, 230, 223, 0.08);
+      border-radius: 2px;
+      display: flex; flex-direction: column; gap: 6px;
+      padding: 6px;
+    }
+    .device-header {
+      height: 4px; background: rgba(240, 230, 223, 0.1); border-radius: 1px;
+    }
+    .device-body {
+      flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+    }
+    .device-body-mobile {
+      grid-template-columns: 1fr;
+    }
+    .device-card {
+      background: rgba(240, 230, 223, 0.05); border-radius: 1px;
+    }
+
+    /* Title transition spread styling */
+    .edit-title-spread {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
+      opacity: 0; pointer-events: none; z-index: 4;
+      transform: translateY(22px);
+    }
+    .edit-title-large {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(3rem, 7vw, 7.5rem);
+      text-transform: uppercase; line-height: 0.95;
+      letter-spacing: -0.04em; color: #F0E6DF;
+    }
+    .edit-title-sub {
+      font-family: var(--sans); font-size: 0.6rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.3em;
+      color: var(--mauve); margin-top: 24px;
+    }
+
+    /* Closing Bridge */
+    .edit-closing {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
+      opacity: 0; pointer-events: none; z-index: 4;
+      transform: translateY(22px);
+      padding: 0 12%;
+    }
+    .edit-closing-quote {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(2rem, 3.8vw, 4.2rem);
+      text-transform: uppercase; text-align: center;
+      color: #F0E6DF;
+      line-height: 1.16; letter-spacing: -.03em;
+      max-width: 68vw;
+    }
+    .edit-closing-meta {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 14px; margin-top: 38px;
+    }
+    .edit-closing-chapter {
+      font-family: var(--sans); font-size: .58rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .22em; color: var(--mauve);
+    }
+    .edit-closing-rule {
+      width: 1px; height: 48px;
+      background: rgba(240, 230, 223, 0.15);
+    }
+
+    @media (max-width: 1024px) {
+      .e-title { font-size: clamp(1.8rem, 4.5vw, 3.6rem); }
+      .e-reflection { font-size: 1.2rem; }
+    }
+    @media (max-width: 768px) {
+      .edit-section { height: auto; padding-bottom: 12vh; }
+      .edit-sticky { position: relative; height: auto; display: block; }
+      .edit-spread {
+        position: relative; display: flex; flex-direction: column;
+        padding: 100px 6% 60px; opacity: 1 !important; transform: none !important;
+        gap: 40px;
+      }
+      .edit-spread-alt .e-text, .edit-spread-alt .e-visual { order: unset; padding: 0; }
+      .e-visual { justify-content: center; margin-top: 20px; }
+      .vis-container { width: 100%; max-width: 380px; }
+      .e-title { font-size: 10vw; }
+      .e-reflection { font-size: 1.35rem; }
+      .edit-bg-word, .e-divider-v, .e-detail, .edit-spotlight { display: none; }
+      .edit-title-spread {
+        position: relative; padding: 100px 6% 40px;
+        opacity: 1 !important; transform: none !important;
+      }
+      .edit-closing {
+        position: relative; padding: 80px 6% 60px;
+        opacity: 1 !important; transform: none !important;
+      }
+      .edit-closing-quote { font-size: 8vw; max-width: 90vw; }
+    }
+  </style>
+
+  <section class="edit-section" id="edit-sec">
+    <div class="edit-sticky" id="edit-sticky">
+      <!-- Spotlight -->
+      <div class="edit-spotlight" id="e-spotlight"></div>
+
+      <!-- Ghost background word -->
+      <div class="edit-bg-word" id="e-bg-word">RHYTHM</div>
+
+      <!-- Persistent editorial chrome -->
+      <div class="e-divider-v"></div>
+      <div class="e-detail e-detail-tl">Chapter 04 &nbsp;·&nbsp; The Edit</div>
+      <div class="e-detail e-detail-tr">Studio Anwesha // Issue 01</div>
+      <div class="e-detail e-detail-bl">Observations on Form</div>
+      <div class="e-detail e-detail-br">Page 22</div>
+
+      <!-- ================================================================
+           SPREAD 00 — CHAPTER TITLE SPREAD
+           ================================================================ -->
+      <div class="edit-title-spread" id="edit-title-spr">
+        <h3 class="edit-title-large">The Edit</h3>
+        <span class="edit-title-sub">Observations on Form &amp; Function</span>
+      </div>
+
+      <!-- ================================================================
+           SPREAD 01 — THE QUIET PATH
+           ================================================================ -->
+      <!-- SPREAD 01: Typography dominates. Visual is secondary. Copy is minimal. -->
+      <div class="edit-spread edit-spread-type-a" id="edit-spread-01">
+        <div class="e-text">
+          <span class="e-num">01</span>
+          <span class="e-category">Usability &nbsp;&middot;&nbsp; User Research &nbsp;&middot;&nbsp; Journey Mapping</span>
+          <h2 class="e-display-word">Clarity.</h2>
+          <p class="e-one-liner">The path the user never notices.</p>
+        </div>
+        <div class="e-visual e-visual-secondary">
+          <div class="vis-container vis-container-sm">
+            <div class="vis-quiet-grid"></div>
+            <div class="vis-quiet-path">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <!-- S-curve: elegant navigation path, not a flowchart -->
+                <path class="flow-line" id="flow-path-line"
+                  d="M 15 85 C 15 55, 85 45, 85 15"
+                  fill="none" stroke-width="1"/>
+                <circle class="flow-node" id="node-1" cx="15" cy="85" r="2.5" />
+                <circle class="flow-node" id="node-2" cx="50" cy="50" r="1.5" />
+                <circle class="flow-node" id="node-3" cx="85" cy="15" r="2.5" />
+              </svg>
+            </div>
+            <div class="vis-grid-coords">USER.JOURNEY // FRICTION &rarr; ZERO</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================
+           SPREAD 02 — THE DISCIPLINE OF COHESION
+           ================================================================ -->
+      <!-- SPREAD 02: Visual dominates. Tiny text secondary. No paragraph. -->
+      <div class="edit-spread edit-spread-type-b" id="edit-spread-02">
+        <div class="e-text e-text-minor">
+          <span class="e-num">02</span>
+          <span class="e-category">Design Systems &nbsp;&middot;&nbsp; Components &nbsp;&middot;&nbsp; Attention to Detail</span>
+          <p class="e-micro-caption">Every measurement is a decision.<br>Every grid line, a promise.</p>
+        </div>
+        <div class="e-visual e-visual-dominant">
+          <div class="vis-container vis-container-lg">
+            <div class="vis-grid-baseline">
+              <div class="grid-line-h"></div>
+              <div class="grid-line-h"></div>
+              <div class="grid-line-h"></div>
+              <div class="grid-line-h"></div>
+              <div class="grid-line-h"></div>
+              <div class="grid-line-h"></div>
+              <div class="grid-line-h"></div>
+            </div>
+            <div class="vis-grid-cols">
+              <div class="grid-col-v"></div>
+              <div class="grid-col-v"></div>
+              <div class="grid-col-v"></div>
+              <div class="grid-col-v"></div>
+              <div class="grid-col-v"></div>
+            </div>
+            <!-- Annotations reference actual Anwesha work -->
+            <div class="blueprint-box" id="bp-box-1"
+              style="width: 55%; height: 36px; top: 18%; left: 12%;"
+              data-label="LUMENXO.NAV // 8PX.GRID"></div>
+            <div class="blueprint-box" id="bp-box-2"
+              style="width: 72%; height: 80px; top: 38%; left: 12%;"
+              data-label="MITRA.PLATFORM // COMPONENTS"></div>
+            <div class="blueprint-box" id="bp-box-3"
+              style="width: 42%; height: 50px; top: 66%; left: 12%;"
+              data-label="KHAOFIT.MOBILE // SPACING.16"></div>
+            <div class="vis-grid-coords">DESIGN.SYSTEM // REUSABLE.COMPONENTS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================
+           SPREAD 03 — FLUIDITY OF FORM
+           ================================================================ -->
+      <!-- SPREAD 03: Pure pull-quote. No illustration. Typography IS the composition. -->
+      <div class="edit-spread edit-spread-type-c" id="edit-spread-03">
+        <div class="e-pull-quote-block">
+          <span class="e-num">03</span>
+          <blockquote class="e-pull-quote">
+            Same intent.<br>Every screen.
+          </blockquote>
+          <div class="e-platform-row">
+            <span class="e-platform-label">Mobile</span>
+            <span class="e-platform-divider"></span>
+            <span class="e-platform-label">Tablet</span>
+            <span class="e-platform-divider"></span>
+            <span class="e-platform-label">Desktop</span>
+          </div>
+          <p class="e-micro-note">Responsive design &nbsp;&middot;&nbsp; Cross-platform interfaces &nbsp;&middot;&nbsp; Mobile-first</p>
+        </div>
+      </div>
+
+      <!-- ================================================================
+           SPREAD 04 — CLOSING BRIDGE
+           ================================================================ -->
+      <!-- CLOSING: Emotional pause before The Designer. Short. Personal. -->
+      <div class="edit-closing" id="edit-closing-spr">
+        <p class="edit-closing-prelude">She builds for people.</p>
+        <div class="edit-closing-meta">
+          <div class="edit-closing-rule"></div>
+          <span class="edit-closing-chapter">Chapter 05 &nbsp;&middot;&nbsp; The Designer</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    /* ===========================================================
+       CHAPTER 04 — THE EDIT SCROLL ENGINE
+       =========================================================== */
+    (function () {
+      const sec = document.getElementById('edit-sec');
+      if (!sec) return;
+
+      const spotlight = document.getElementById('e-spotlight');
+      const bgWord = document.getElementById('e-bg-word');
+      
+      const tSpr = document.getElementById('edit-title-spr');
+      const s01 = document.getElementById('edit-spread-01');
+      const s02 = document.getElementById('edit-spread-02');
+      const s03 = document.getElementById('edit-spread-03');
+      const closing = document.getElementById('edit-closing-spr');
+
+      // Visual element refs for animation triggers
+      const flowPathLine = document.getElementById('flow-path-line');
+      const node1 = document.getElementById('node-1');
+      const node2 = document.getElementById('node-2');
+      const node3 = document.getElementById('node-3');
+
+      const bpBox1 = document.getElementById('bp-box-1');
+      const bpBox2 = document.getElementById('bp-box-2');
+      const bpBox3 = document.getElementById('bp-box-3');
+
+      /* -- Spotlight mouse tracking (translate3d) -- */
+      let mX = window.innerWidth / 2;
+      let mY = window.innerHeight / 2;
+      let sX = mX, sY = mY;
+
+      window.addEventListener('mousemove', e => {
+        mX = e.clientX;
+        mY = e.clientY;
+      }, { passive: true });
+
+      function progress() {
+        const r = sec.getBoundingClientRect();
+        return Math.min(Math.max(-r.top / (sec.offsetHeight - window.innerHeight), 0), 1);
+      }
+
+      const lerp = (a, b, t) => a + (b - a) * t;
+      const clamp01 = (v) => Math.min(Math.max(v, 0), 1);
+      const range = (p, a, b) => clamp01((p - a) / (b - a));
+
+      const WORDS = ['RHYTHM', 'INTUITION', 'SYSTEM', 'SCALED', 'STRUCTURE'];
+      let currentWordIdx = -1;
+      let wordFading = false;
+
+      function setWord(idx) {
+        if (idx === currentWordIdx || wordFading) return;
+        wordFading = true;
+        currentWordIdx = idx;
+        if (bgWord) {
+          bgWord.style.opacity = 0;
+          setTimeout(() => {
+            bgWord.textContent = WORDS[idx];
+            bgWord.style.opacity = 0.012;
+            wordFading = false;
+          }, 500);
+        }
+      }
+
+      function applySpread(el, op) {
+        if (!el) return;
+        el.style.opacity = op;
+        const drift = (1 - op) * 24;
+        el.style.transform = op > 0 ? `translateY(${-drift}px)` : `translateY(24px)`;
+        el.style.pointerEvents = op > 0.5 ? 'auto' : 'none';
+      }
+
+      function tick() {
+        sX = lerp(sX, mX, 0.05);
+        sY = lerp(sY, mY, 0.05);
+        if (spotlight) {
+          spotlight.style.transform = `translate3d(${sX.toFixed(1)}px, ${sY.toFixed(1)}px, 0) translate(-50%, -50%)`;
+        }
+
+        const p = progress();
+
+        /* ------ Opacity transitions per spread ------ */
+        // 0. Title Spread: full from 0.00 -> 0.15, fades out 0.15 -> 0.22
+        const opTitle = p < 0.15 ? 1 : 1 - range(p, 0.15, 0.22);
+        if (tSpr) {
+          tSpr.style.opacity = opTitle;
+          tSpr.style.transform = `translateY(${(1 - opTitle) * -20}px)`;
+        }
+
+        // 1. Spread 01 (The Quiet Path): fades in 0.18 -> 0.25, full -> 0.42, fades out 0.42 -> 0.49
+        const op1a = range(p, 0.18, 0.25);
+        const op1b = 1 - range(p, 0.42, 0.49);
+        const op1 = Math.min(op1a, op1b);
+        applySpread(s01, op1);
+
+        // 2. Spread 02 (Cohesion): fades in 0.42 -> 0.49, full -> 0.66, fades out 0.66 -> 0.73
+        const op2a = range(p, 0.42, 0.49);
+        const op2b = 1 - range(p, 0.66, 0.73);
+        const op2 = Math.min(op2a, op2b);
+        applySpread(s02, op2);
+
+        // 3. Spread 03 (Fluidity): fades in 0.66 -> 0.73, full -> 0.88, fades out 0.88 -> 0.94
+        const op3a = range(p, 0.66, 0.73);
+        const op3b = 1 - range(p, 0.88, 0.94);
+        const op3 = Math.min(op3a, op3b);
+        applySpread(s03, op3);
+
+        // 4. Closing Bridge: fades in 0.90 -> 1.00
+        const opC = range(p, 0.90, 1.00);
+        if (closing) {
+          closing.style.opacity = opC;
+          closing.style.transform = `translateY(${(1 - opC) * 20}px)`;
+        }
+
+        /* ------ Visual Animations driven by specific scroll checkpoints ------ */
+        
+        // Visual 1: Draw path SVG (active in Spread 1)
+        if (flowPathLine) {
+          const drawProgress = range(p, 0.20, 0.35);
+          const dashOffset = 800 - (drawProgress * 800);
+          flowPathLine.style.strokeDashoffset = dashOffset;
+          
+          if (drawProgress > 0.1) node1.classList.add('flow-node-active'); else node1.classList.remove('flow-node-active');
+          if (drawProgress > 0.5) node2.classList.add('flow-node-active'); else node2.classList.remove('flow-node-active');
+          if (drawProgress > 0.9) node3.classList.add('flow-node-active'); else node3.classList.remove('flow-node-active');
+        }
+
+        // Visual 2: Reveal blueprint boxes staggered (Spread 02)
+        if (bpBox1) { if (p > 0.46) bpBox1.classList.add('bp-active'); else bpBox1.classList.remove('bp-active'); }
+        if (bpBox2) { if (p > 0.52) bpBox2.classList.add('bp-active'); else bpBox2.classList.remove('bp-active'); }
+        if (bpBox3) { if (p > 0.58) bpBox3.classList.add('bp-active'); else bpBox3.classList.remove('bp-active'); }
+
+        /* ------ Background word sync ------ */
+        if (p < 0.20)      setWord(0);
+        else if (p < 0.45) setWord(1);
+        else if (p < 0.70) setWord(2);
+        else if (p < 0.90) setWord(3);
+        else               setWord(4);
+
+        if (bgWord) {
+          const transY = (p - 0.5) * -50;
+          bgWord.style.transform = `translate3d(-50%, calc(-50% + ${transY.toFixed(1)}px), 0)`;
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      tick();
+    })();
+  </script>
+  <!-- ===========================================================
+       CHAPTER 05 — THE DESIGNER
+       Editorial profile. Verified information only.
+       No invented personality. No biography.
+       =========================================================== -->
+  <style>
+    .designer-section {
+      position: relative;
+      background: #FCF7F5; /* Back to warm editorial cream */
+      height: 410vh;
+      overflow: clip;
+      z-index: 7;
+    }
+
+    .designer-sticky {
+      position: sticky; top: 0;
+      height: 100vh; width: 100%;
+      display: flex; align-items: center; justify-content: center;
+      overflow: clip; z-index: 2;
+    }
+
+    .designer-sticky::before {
+      content: '';
+      position: absolute; inset: 0;
+      z-index: 1; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
+    }
+
+    /* Editorial chrome */
+    .d-detail {
+      position: absolute;
+      font-family: var(--sans); font-size: .57rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .2em;
+      color: var(--mauve); opacity: .5; z-index: 6;
+    }
+    .d-detail-tl { top: 46px; left: 6%; }
+    .d-detail-tr {
+      top: 46px; right: 6%;
+      font-family: var(--editorial); font-style: italic;
+      text-transform: none; font-size: 1rem; letter-spacing: 0;
+      opacity: .4; color: var(--charcoal);
+    }
+    .d-detail-bl { bottom: 46px; left: 6%; }
+    .d-detail-br { bottom: 46px; right: 6%; }
+    .d-divider-v {
+      position: absolute; left: 4.5%; top: 96px; bottom: 96px;
+      width: .5px; background: rgba(38,38,38,.06); z-index: 3;
+    }
+
+    /* Ghost background word */
+    .d-bg-word {
+      position: absolute;
+      font-family: var(--serif); font-weight: 900;
+      font-size: 26vw; color: var(--charcoal);
+      opacity: 0.02; text-transform: uppercase;
+      letter-spacing: -0.02em; line-height: 1;
+      pointer-events: none; z-index: 2;
+      user-select: none; white-space: nowrap;
+      left: 50%; top: 50%;
+      transform: translate3d(-50%,-50%,0);
+      transition: opacity 0.7s ease;
+    }
+
+    /* Soft spotlight */
+    .d-spotlight {
+      position: absolute; left: 0; top: 0;
+      width: 80vmax; height: 80vmax; border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,196,215,.06) 0%, transparent 70%);
+      pointer-events: none; z-index: 2;
+      transform: translate3d(-50%,-50%,0);
+      will-change: transform;
+    }
+
+    /* ---- Chapter title spread ---- */
+    .ds-title-spread {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      opacity: 0; pointer-events: none; z-index: 4;
+      transform: translateY(20px);
+    }
+    .ds-title-large {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(3.5rem, 8vw, 8.5rem);
+      line-height: .93; text-transform: uppercase;
+      letter-spacing: -.04em; color: var(--charcoal);
+    }
+    .ds-title-sub {
+      font-family: var(--sans); font-size: .58rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .28em;
+      color: var(--mauve); margin-top: 22px;
+    }
+
+    /* ---- Portrait spread ---- */
+    .ds-portrait-spread {
+      position: absolute; inset: 0;
+      display: grid; grid-template-columns: 0.56fr 0.44fr;
+      opacity: 0; pointer-events: none; z-index: 3;
+      will-change: opacity, transform;
+    }
+
+    .ds-portrait-col {
+      position: relative;
+      overflow: hidden;
+    }
+    .ds-portrait-col img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: 50% 18%;
+      /* Very subtle desaturation for editorial feel */
+      filter: saturate(0.88) brightness(1.02);
+      transform-origin: center top;
+      will-change: transform;
+    }
+    /* Fine editorial frame on portrait */
+    .ds-portrait-col::after {
+      content: '';
+      position: absolute; inset: 0;
+      box-shadow: inset 0 0 0 0.5px rgba(38,38,38,.08);
+      pointer-events: none; z-index: 2;
+    }
+
+    .ds-text-col {
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 80px 8% 80px 6%;
+      position: relative; z-index: 4;
+    }
+    .ds-chapter-ref {
+      font-family: var(--sans); font-size: .5rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .22em;
+      color: var(--mauve); opacity: .65;
+      margin-bottom: 28px;
+    }
+    .ds-name {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(2.8rem, 5.5vw, 6rem);
+      line-height: .9; text-transform: uppercase;
+      letter-spacing: -.04em; color: var(--charcoal);
+      margin-bottom: 28px;
+    }
+    .ds-rule {
+      width: 36px; height: .5px;
+      background: rgba(101,68,92,.4);
+      margin-bottom: 24px;
+    }
+    .ds-intro {
+      font-family: var(--editorial);
+      font-size: 1.2rem; line-height: 1.6; font-weight: 400;
+      color: var(--charcoal); opacity: .82;
+      max-width: 380px; margin-bottom: 28px;
+    }
+    .ds-descriptor {
+      font-family: var(--sans); font-size: .52rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .18em;
+      color: var(--mauve); opacity: .7;
+    }
+
+    /* ---- Work spread ---- */
+    .ds-work-spread {
+      position: absolute; inset: 0;
+      display: grid; grid-template-columns: 0.35fr 0.65fr;
+      align-items: center;
+      padding: 90px 8% 90px 8%;
+      gap: 4vw;
+      opacity: 0; pointer-events: none; z-index: 3;
+      will-change: opacity, transform;
+    }
+    .ds-work-heading {
+      display: flex; flex-direction: column;
+      justify-content: center;
+    }
+    .ds-work-label {
+      font-family: var(--sans); font-size: .5rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .22em;
+      color: var(--mauve); opacity: .65; margin-bottom: 16px;
+    }
+    .ds-work-title {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 4.5rem);
+      line-height: .93; text-transform: uppercase;
+      letter-spacing: -.04em; color: var(--charcoal);
+    }
+
+    .ds-work-entries {
+      display: flex; flex-direction: column;
+      gap: 0;
+    }
+    .ds-entry {
+      padding: 28px 0;
+      border-top: .5px solid rgba(38,38,38,.1);
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .ds-entry:last-child { border-bottom: .5px solid rgba(38,38,38,.1); }
+    .ds-entry.ds-entry-visible { opacity: 1; transform: translateY(0); }
+
+    .ds-entry-company {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      text-transform: uppercase; letter-spacing: -.02em;
+      color: var(--charcoal); margin-bottom: 6px;
+    }
+    .ds-entry-meta {
+      font-family: var(--sans); font-size: .52rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .15em;
+      color: var(--mauve); opacity: .7; margin-bottom: 10px;
+    }
+    .ds-entry-desc {
+      font-family: var(--editorial); font-style: italic;
+      font-size: 1rem; line-height: 1.5; font-weight: 400;
+      color: var(--charcoal); opacity: .72;
+      max-width: 500px;
+    }
+
+    /* ---- Values spread (typography composition) ---- */
+    .ds-values-spread {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: flex-start;
+      padding: 90px 10% 90px 10%;
+      opacity: 0; pointer-events: none; z-index: 3;
+      will-change: opacity, transform;
+    }
+    .ds-values-eyebrow {
+      font-family: var(--sans); font-size: .52rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .22em;
+      color: var(--mauve); opacity: .7; margin-bottom: 28px;
+    }
+    .ds-values-composition {
+      display: flex; flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+    /* Each value line — different weight creates rhythm */
+    .ds-val {
+      font-family: var(--serif);
+      text-transform: uppercase;
+      letter-spacing: -.02em;
+      color: var(--charcoal);
+      line-height: 1.05;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .ds-val.ds-val-visible { opacity: 1; transform: translateY(0); }
+    .ds-val-lg  { font-size: clamp(2.4rem, 4.5vw, 5.2rem); font-weight: 900; }
+    .ds-val-md  { font-size: clamp(1.4rem, 2.5vw, 2.8rem); font-weight: 400; color: rgba(38,38,38,.55); margin-left: 4vw; }
+    .ds-val-sm  { font-size: clamp(1rem, 1.6vw, 1.8rem);   font-weight: 900; margin-left: 8vw; }
+    .ds-val-xs  { font-size: clamp(.8rem, 1.2vw, 1.3rem);  font-weight: 400; color: rgba(38,38,38,.45); margin-left: 2vw; font-style: italic; font-family: var(--editorial); }
+
+    /* ---- Closing bridge ---- */
+    .ds-closing {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      opacity: 0; pointer-events: none; z-index: 4;
+      padding: 0 12%;
+    }
+    .ds-closing-line {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(3rem, 7vw, 8rem);
+      text-transform: uppercase; line-height: .93;
+      letter-spacing: -.04em; color: var(--charcoal);
+    }
+    .ds-closing-meta {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 14px; margin-top: 36px;
+    }
+    .ds-closing-rule {
+      width: 1px; height: 48px;
+      background: rgba(38,38,38,.15);
+    }
+    .ds-closing-chapter {
+      font-family: var(--sans); font-size: .58rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .22em; color: var(--mauve);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .designer-section { height: auto; padding-bottom: 12vh; }
+      .designer-sticky { position: relative; height: auto; display: block; }
+      .ds-portrait-spread {
+        position: relative; display: flex; flex-direction: column;
+        opacity: 1 !important; transform: none !important;
+      }
+      .ds-portrait-col { height: 70vh; }
+      .ds-text-col { padding: 48px 6%; }
+      .ds-work-spread {
+        position: relative; display: flex; flex-direction: column;
+        padding: 80px 6% 60px; opacity: 1 !important; transform: none !important;
+        gap: 32px;
+      }
+      .ds-values-spread {
+        position: relative; padding: 80px 6% 60px;
+        opacity: 1 !important; transform: none !important;
+      }
+      .ds-title-spread, .ds-closing {
+        position: relative; padding: 80px 6% 60px;
+        opacity: 1 !important; transform: none !important;
+      }
+      .d-bg-word, .d-divider-v, .d-detail, .d-spotlight { display: none; }
+    }
+  </style>
+
+  <section class="designer-section" id="designer-sec">
+    <div class="designer-sticky" id="designer-sticky">
+
+      <div class="d-spotlight" id="d-spotlight"></div>
+      <div class="d-bg-word" id="d-bg-word">ANWESHA</div>
+
+      <div class="d-divider-v"></div>
+      <div class="d-detail d-detail-tl">Chapter 05 &nbsp;&middot;&nbsp; The Designer</div>
+      <div class="d-detail d-detail-tr">Studio Anwesha // Issue 01</div>
+      <div class="d-detail d-detail-bl">Editorial Profile</div>
+      <div class="d-detail d-detail-br">Page 32</div>
+
+      <!-- ========================================================
+           SPREAD A — Chapter entry title
+           ======================================================== -->
+      <div class="ds-title-spread" id="ds-title-spr">
+        <h2 class="ds-title-large">The<br>Designer</h2>
+        <span class="ds-title-sub">Profile &nbsp;&middot;&nbsp; Issue 01 &nbsp;&middot;&nbsp; 2025</span>
+      </div>
+
+      <!-- ========================================================
+           SPREAD B — Portrait & Name
+           ======================================================== -->
+      <div class="ds-portrait-spread" id="ds-portrait-spr">
+        <div class="ds-portrait-col">
+          <img src="A.png" alt="Anwesha Jena — UI/UX Designer" id="ds-portrait-img">
+        </div>
+        <div class="ds-text-col">
+          <span class="ds-chapter-ref">Chapter 05 &nbsp;&middot;&nbsp; The Designer</span>
+          <h2 class="ds-name">Anwesha<br>Jena</h2>
+          <div class="ds-rule"></div>
+          <p class="ds-intro">
+            A UI/UX designer and Computer Science Engineering student whose practice is built around a single discipline: designing digital experiences that feel self-evident. Across enterprise software, vehicle platforms, and health applications, her work has consistently prioritised clarity, usability, and the precision of detail that most visitors never notice.
+          </p>
+          <span class="ds-descriptor">UI/UX Designer &nbsp;&middot;&nbsp; Computer Science Engineering</span>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           SPREAD C — The Work (editorial annotations, no cards)
+           ======================================================== -->
+      <div class="ds-work-spread" id="ds-work-spr">
+        <div class="ds-work-heading">
+          <span class="ds-work-label">Professional Engagements</span>
+          <h3 class="ds-work-title">The<br>Work</h3>
+        </div>
+        <div class="ds-work-entries">
+
+          <div class="ds-entry" id="ds-entry-1">
+            <div class="ds-entry-company">LumenXo Software</div>
+            <div class="ds-entry-meta">UI/UX Designer &nbsp;&middot;&nbsp; Nov 2024 &ndash; Present</div>
+            <p class="ds-entry-desc">Enterprise web and mobile interfaces across multiple industries. Wireframes, user flows, prototypes, and responsive layouts designed in close collaboration with developers and stakeholders.</p>
+          </div>
+
+          <div class="ds-entry" id="ds-entry-2">
+            <div class="ds-entry-company">Mitra Ventures</div>
+            <div class="ds-entry-meta">UI/UX Designer &nbsp;&middot;&nbsp; Aug &ndash; Sep 2025</div>
+            <p class="ds-entry-desc">End-to-end user flows for a vehicle-focused digital platform. Navigation, accessibility, and visual consistency maintained through reusable design components.</p>
+          </div>
+
+          <div class="ds-entry" id="ds-entry-3">
+            <div class="ds-entry-company">KhaoFit</div>
+            <div class="ds-entry-meta">UI/UX Designer &nbsp;&middot;&nbsp; Sep &ndash; Oct 2024</div>
+            <p class="ds-entry-desc">A health-focused food delivery experience centred on usability and accessibility. User journeys and responsive mobile screens designed to simplify nutrition tracking.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========================================================
+           SPREAD D — Values / Strengths as typography composition
+           ======================================================== -->
+      <div class="ds-values-spread" id="ds-values-spr">
+        <span class="ds-values-eyebrow">What she brings to every brief</span>
+        <div class="ds-values-composition">
+          <span class="ds-val ds-val-lg" id="dv-1">User-Centered</span>
+          <span class="ds-val ds-val-xs" id="dv-2">every decision starts with the person on the other side</span>
+          <span class="ds-val ds-val-md" id="dv-3">Visual Design &nbsp;&middot;&nbsp; Typography</span>
+          <span class="ds-val ds-val-sm" id="dv-4">Color Systems</span>
+          <span class="ds-val ds-val-lg" id="dv-5">Detail.</span>
+          <span class="ds-val ds-val-xs" id="dv-6">attention to detail &nbsp;&middot;&nbsp; problem solving &nbsp;&middot;&nbsp; analytical thinking</span>
+          <span class="ds-val ds-val-md" id="dv-7">Responsive &nbsp;&middot;&nbsp; Adaptive</span>
+          <span class="ds-val ds-val-sm" id="dv-8">Wireframing &nbsp;&middot;&nbsp; Prototyping</span>
+          <span class="ds-val ds-val-xs" id="dv-9">collaboration &nbsp;&middot;&nbsp; fast learning &nbsp;&middot;&nbsp; adaptability</span>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           CLOSING BRIDGE → Chapter 06: The Journey
+           ======================================================== -->
+      <div class="ds-closing" id="ds-closing-spr">
+        <h2 class="ds-closing-line">The<br>Journey</h2>
+        <div class="ds-closing-meta">
+          <div class="ds-closing-rule"></div>
+          <span class="ds-closing-chapter">Chapter 06 &nbsp;&middot;&nbsp; The Journey</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    /* ===========================================================
+       CHAPTER 05 — THE DESIGNER SCROLL ENGINE
+       Section: 410vh  Sticky: 100vh  Scroll runway: 310vh
+
+       Timeline:
+         p 0.00 – 0.14   Title spread visible
+         p 0.12 – 0.20   Title fades out
+         p 0.18 – 0.50   Portrait spread
+         p 0.46 – 0.54   Portrait fades out
+         p 0.52 – 0.76   Work spread + entries stagger
+         p 0.72 – 0.80   Work fades out
+         p 0.78 – 0.93   Values spread + lines stagger
+         p 0.90 – 1.00   Closing bridge
+    =========================================================== */
+    (function () {
+      const sec = document.getElementById('designer-sec');
+      if (!sec) return;
+
+      const spotlight  = document.getElementById('d-spotlight');
+      const bgWord     = document.getElementById('d-bg-word');
+      const tSpr       = document.getElementById('ds-title-spr');
+      const portSpr    = document.getElementById('ds-portrait-spr');
+      const workSpr    = document.getElementById('ds-work-spr');
+      const valuesSpr  = document.getElementById('ds-values-spr');
+      const closingSpr = document.getElementById('ds-closing-spr');
+      const portImg    = document.getElementById('ds-portrait-img');
+
+      const entry1 = document.getElementById('ds-entry-1');
+      const entry2 = document.getElementById('ds-entry-2');
+      const entry3 = document.getElementById('ds-entry-3');
+
+      const dvEls = [1,2,3,4,5,6,7,8,9].map(i => document.getElementById('dv-' + i));
+
+      /* Mouse spotlight */
+      let mX = window.innerWidth / 2, mY = window.innerHeight / 2;
+      let sX = mX, sY = mY;
+      window.addEventListener('mousemove', e => { mX = e.clientX; mY = e.clientY; }, { passive: true });
+
+      const lerp    = (a, b, t) => a + (b - a) * t;
+      const clamp01 = v => Math.min(Math.max(v, 0), 1);
+      const range   = (p, a, b) => clamp01((p - a) / (b - a));
+
+      function progress() {
+        const r = sec.getBoundingClientRect();
+        return clamp01(-r.top / (sec.offsetHeight - window.innerHeight));
+      }
+
+      function applyEl(el, op, driftDir) {
+        if (!el) return;
+        const d = (1 - op) * 22 * (driftDir || 1);
+        el.style.opacity = op;
+        el.style.transform = `translateY(${d}px)`;
+        el.style.pointerEvents = op > 0.5 ? 'auto' : 'none';
+      }
+
+      const WORDS = ['ANWESHA', 'WORK', 'DETAIL', 'JOURNEY'];
+      let wIdx = -1, wFading = false;
+      function setWord(idx) {
+        if (idx === wIdx || wFading) return;
+        wFading = true; wIdx = idx;
+        bgWord.style.opacity = 0;
+        setTimeout(() => { bgWord.textContent = WORDS[idx]; bgWord.style.opacity = 0.02; wFading = false; }, 500);
+      }
+
+      function tick() {
+        /* Spotlight */
+        sX = lerp(sX, mX, 0.05);
+        sY = lerp(sY, mY, 0.05);
+        if (spotlight) spotlight.style.transform = `translate3d(${sX.toFixed(1)}px,${sY.toFixed(1)}px,0) translate(-50%,-50%)`;
+
+        const p = progress();
+
+        /* ----- Spreads ----- */
+        // A: Title
+        const opT = p < 0.12 ? 1 : 1 - range(p, 0.12, 0.20);
+        applyEl(tSpr, opT, -1);
+
+        // B: Portrait
+        const opP = Math.min(range(p, 0.18, 0.26), 1 - range(p, 0.46, 0.54));
+        applyEl(portSpr, opP);
+        // Subtle portrait upward drift as it fades
+        if (portImg) portImg.style.transform = `scale(${1 + p * 0.02})`;
+
+        // C: Work
+        const opW = Math.min(range(p, 0.52, 0.60), 1 - range(p, 0.72, 0.80));
+        applyEl(workSpr, opW);
+        // Stagger entries
+        if (entry1) { if (p > 0.56) entry1.classList.add('ds-entry-visible'); else entry1.classList.remove('ds-entry-visible'); }
+        if (entry2) { if (p > 0.60) entry2.classList.add('ds-entry-visible'); else entry2.classList.remove('ds-entry-visible'); }
+        if (entry3) { if (p > 0.64) entry3.classList.add('ds-entry-visible'); else entry3.classList.remove('ds-entry-visible'); }
+
+        // D: Values
+        const opV = Math.min(range(p, 0.78, 0.86), 1 - range(p, 0.90, 0.96));
+        applyEl(valuesSpr, opV);
+        // Stagger value lines
+        dvEls.forEach((el, i) => {
+          if (!el) return;
+          const threshold = 0.80 + i * 0.014;
+          if (p > threshold) el.classList.add('ds-val-visible'); else el.classList.remove('ds-val-visible');
+        });
+
+        // Closing
+        const opC = range(p, 0.92, 1.00);
+        applyEl(closingSpr, opC, -1);
+
+        /* Background word */
+        if      (p < 0.22) setWord(0);
+        else if (p < 0.55) setWord(1);
+        else if (p < 0.80) setWord(2);
+        else               setWord(3);
+
+        if (bgWord) {
+          const ty = (p - 0.5) * -48;
+          bgWord.style.transform = `translate3d(-50%, calc(-50% + ${ty.toFixed(1)}px), 0)`;
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      tick();
+    })();
+  </script>
+  <!-- ===========================================================
+       CHAPTER 06 — THE NEXT CHAPTER
+       The final page of the publication.
+       Cream background returns — visual closure with The Cover.
+       =========================================================== -->
+  <style>
+    .nc-section {
+      position: relative;
+      background: #FCF7F5; /* Returns to Cover cream — the circle closes */
+      height: 360vh;
+      overflow: clip;
+      z-index: 8;
+    }
+
+    .nc-sticky {
+      position: sticky; top: 0;
+      height: 100vh; width: 100%;
+      overflow: clip; z-index: 2;
+    }
+
+    /* Same grain as the Cover — reinforces the symmetry */
+    .nc-sticky::before {
+      content: '';
+      position: absolute; inset: 0;
+      z-index: 1; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
+    }
+
+    /* Ambient blush — same as the very first hero section */
+    .nc-blush-tl {
+      position: absolute;
+      top: -18%; left: -18%;
+      width: 55vmax; height: 55vmax;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,196,215,.09) 0%, transparent 68%);
+      pointer-events: none; z-index: 1;
+    }
+
+    /* Editorial chrome */
+    .nc-detail {
+      position: absolute;
+      font-family: var(--sans); font-size: .57rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .2em;
+      color: var(--mauve); opacity: .45; z-index: 6;
+    }
+    .nc-detail-tl { top: 46px; left: 6%; }
+    .nc-detail-tr {
+      top: 46px; right: 6%;
+      font-family: var(--editorial); font-style: italic;
+      text-transform: none; font-size: 1rem; letter-spacing: 0;
+      opacity: .35; color: var(--charcoal);
+    }
+    .nc-detail-bl { bottom: 46px; left: 6%; opacity: .3; }
+    .nc-detail-br { bottom: 46px; right: 6%; opacity: .3; }
+    .nc-divider-v {
+      position: absolute; left: 4.5%; top: 96px; bottom: 96px;
+      width: .5px; background: rgba(38,38,38,.06); z-index: 3;
+    }
+
+    /* ---- SPREAD A: Chapter Title ---- */
+    .nc-title-spread {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: flex-start;
+      padding: 0 10%;
+      opacity: 0; pointer-events: none; z-index: 4;
+      will-change: opacity, transform;
+    }
+    .nc-title-eyebrow {
+      font-family: var(--sans); font-size: .52rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .26em;
+      color: var(--mauve); opacity: .7; margin-bottom: 20px;
+    }
+    .nc-title-main {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(4rem, 9vw, 10rem);
+      line-height: .88; text-transform: uppercase;
+      letter-spacing: -.04em; color: var(--charcoal);
+      margin-bottom: 32px;
+    }
+    .nc-title-rule {
+      width: 52px; height: .5px;
+      background: rgba(101,68,92,.3);
+    }
+
+    /* ---- SPREAD B: Editorial Message ---- */
+    .nc-message-spread {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 0 14%;
+      opacity: 0; pointer-events: none; z-index: 3;
+      will-change: opacity, transform;
+    }
+    .nc-message-quote {
+      font-family: var(--editorial); font-weight: 400; font-style: italic;
+      font-size: clamp(1.4rem, 2.8vw, 2.6rem);
+      line-height: 1.55; color: var(--charcoal); opacity: .86;
+      max-width: 680px; margin-bottom: 48px;
+    }
+    .nc-message-quote em {
+      font-style: normal;
+      font-family: var(--serif); font-weight: 900;
+      font-size: 1.05em; letter-spacing: -.03em;
+    }
+    /* Journey breadcrumb — tiny editorial annotation */
+    .nc-journey {
+      display: flex; align-items: center; gap: 10px;
+      flex-wrap: wrap; justify-content: center;
+    }
+    .nc-j-step {
+      font-family: var(--sans); font-size: .48rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .16em;
+      color: var(--charcoal); opacity: .38;
+    }
+    .nc-j-arrow {
+      font-size: .55rem; color: var(--mauve); opacity: .35;
+    }
+
+    /* ---- SPREAD C: Contact as editorial publication credits ---- */
+    .nc-contact-spread {
+      position: absolute; inset: 0;
+      display: grid; grid-template-columns: 0.38fr 0.62fr;
+      align-items: center;
+      padding: 90px 10%;
+      gap: 6vw;
+      opacity: 0; pointer-events: none; z-index: 3;
+      will-change: opacity, transform;
+    }
+    .nc-contact-heading {
+      display: flex; flex-direction: column;
+    }
+    .nc-contact-label {
+      font-family: var(--sans); font-size: .5rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .22em;
+      color: var(--mauve); opacity: .65; margin-bottom: 16px;
+    }
+    .nc-contact-title {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(2.4rem, 4.5vw, 5rem);
+      line-height: .9; text-transform: uppercase;
+      letter-spacing: -.04em; color: var(--charcoal);
+    }
+
+    .nc-contact-list {
+      display: flex; flex-direction: column;
+      gap: 0;
+    }
+    .nc-contact-item {
+      padding: 24px 0;
+      border-top: .5px solid rgba(38,38,38,.09);
+      display: flex; flex-direction: column; gap: 6px;
+      opacity: 0; transform: translateY(12px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .nc-contact-item:last-child { border-bottom: .5px solid rgba(38,38,38,.09); }
+    .nc-contact-item.nc-item-visible { opacity: 1; transform: translateY(0); }
+    .nc-contact-channel {
+      font-family: var(--sans); font-size: .48rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .18em;
+      color: var(--mauve); opacity: .6;
+    }
+    .nc-contact-value {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(1rem, 1.8vw, 1.6rem);
+      color: var(--charcoal); letter-spacing: -.01em;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+    .nc-contact-value:hover { opacity: .6; }
+
+    /* ---- SPREAD D: Final Signature ---- */
+    .nc-signature-spread {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      opacity: 0; pointer-events: none; z-index: 4;
+    }
+
+    /* The quiet echo of the Cover's ANWESHA — intentionally small */
+    .nc-sig-name {
+      font-family: var(--serif); font-weight: 900;
+      font-size: clamp(1.8rem, 3.5vw, 3.8rem);
+      text-transform: uppercase; letter-spacing: .08em;
+      color: var(--charcoal); margin-bottom: 12px;
+      opacity: .9;
+    }
+    .nc-sig-role {
+      font-family: var(--sans); font-size: .58rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .28em;
+      color: var(--mauve); opacity: .7;
+      margin-bottom: 36px;
+    }
+    .nc-sig-rule {
+      width: 60px; height: .5px;
+      background: rgba(101,68,92,.25);
+      margin-bottom: 36px;
+    }
+    .nc-sig-close {
+      font-family: var(--editorial); font-style: italic;
+      font-size: 1rem; font-weight: 400;
+      color: var(--charcoal); opacity: .45;
+      letter-spacing: .02em;
+    }
+    .nc-sig-credits {
+      margin-top: 24px;
+      font-family: var(--sans); font-size: .44rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: .18em;
+      color: var(--charcoal); opacity: .22;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nc-section { height: auto; padding-bottom: 12vh; }
+      .nc-sticky { position: relative; height: auto; display: block; }
+      .nc-title-spread, .nc-message-spread, .nc-signature-spread {
+        position: relative; padding: 80px 6% 60px;
+        opacity: 1 !important; transform: none !important;
+      }
+      .nc-contact-spread {
+        position: relative; display: flex; flex-direction: column;
+        padding: 80px 6% 60px; gap: 32px;
+        opacity: 1 !important; transform: none !important;
+      }
+      .nc-contact-item { opacity: 1 !important; transform: none !important; }
+      .nc-divider-v, .nc-detail { display: none; }
+      .nc-title-main { font-size: 14vw; }
+    }
+  </style>
+
+  <section class="nc-section" id="nc-sec">
+    <div class="nc-sticky" id="nc-sticky">
+
+      <!-- Ambient blush (mirrors the Cover) -->
+      <div class="nc-blush-tl"></div>
+
+      <!-- Editorial chrome -->
+      <div class="nc-divider-v"></div>
+      <div class="nc-detail nc-detail-tl">Chapter 06 &nbsp;&middot;&nbsp; The Next Chapter</div>
+      <div class="nc-detail nc-detail-tr">Studio Anwesha // Issue 01</div>
+      <div class="nc-detail nc-detail-bl">Issue Complete</div>
+      <div class="nc-detail nc-detail-br">Final Page</div>
+
+      <!-- ====================================================
+           SPREAD A — Chapter Title
+           Left-aligned. Asymmetric. Like a final chapter page.
+           ==================================================== -->
+      <div class="nc-title-spread" id="nc-title-spr">
+        <span class="nc-title-eyebrow">Chapter 06 &nbsp;&middot;&nbsp; The Final Page</span>
+        <h2 class="nc-title-main">The Next<br>Chapter</h2>
+        <div class="nc-title-rule"></div>
+      </div>
+
+      <!-- ====================================================
+           SPREAD B — Editorial Message + Journey Breadcrumb
+           ==================================================== -->
+      <div class="nc-message-spread" id="nc-message-spr">
+        <p class="nc-message-quote">
+          Every interface that has ever mattered to someone began with a single honest conversation &mdash; between what a person needed and what could actually be built. <em>That conversation</em> is still available.
+        </p>
+        <!-- Journey trail — quiet editorial annotation -->
+        <div class="nc-journey">
+          <span class="nc-j-step">CSE Student</span>
+          <span class="nc-j-arrow">&rarr;</span>
+          <span class="nc-j-step">UI/UX Designer</span>
+          <span class="nc-j-arrow">&rarr;</span>
+          <span class="nc-j-step">LumenXo</span>
+          <span class="nc-j-arrow">&rarr;</span>
+          <span class="nc-j-step">Mitra Ventures</span>
+          <span class="nc-j-arrow">&rarr;</span>
+          <span class="nc-j-step">KhaoFit</span>
+          <span class="nc-j-arrow">&rarr;</span>
+          <span class="nc-j-step" style="color: var(--mauve); opacity: .7;">What's Next</span>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           SPREAD C — Contact as Editorial Publication Credits
+           No form. No cards. Only editorial typography.
+           ==================================================== -->
+      <div class="nc-contact-spread" id="nc-contact-spr">
+        <div class="nc-contact-heading">
+          <span class="nc-contact-label">Begin the Conversation</span>
+          <h3 class="nc-contact-title">Reach<br>Out</h3>
+        </div>
+        <div class="nc-contact-list">
+
+          <!-- UPDATE with real email before publishing -->
+          <div class="nc-contact-item" id="nc-ci-1">
+            <span class="nc-contact-channel">Electronic Mail</span>
+            <a class="nc-contact-value" href="mailto:anwesha.jena@gmail.com">anwesha.jena@gmail.com</a>
+          </div>
+
+          <!-- UPDATE with real LinkedIn URL before publishing -->
+          <div class="nc-contact-item" id="nc-ci-2">
+            <span class="nc-contact-channel">LinkedIn</span>
+            <a class="nc-contact-value" href="https://linkedin.com/in/anwesha-jena" target="_blank" rel="noopener">linkedin.com/in/anwesha-jena</a>
+          </div>
+
+          <!-- UPDATE with real Behance URL before publishing -->
+          <div class="nc-contact-item" id="nc-ci-3">
+            <span class="nc-contact-channel">Behance</span>
+            <a class="nc-contact-value" href="https://behance.net/anwesha" target="_blank" rel="noopener">behance.net/anwesha</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ====================================================
+           SPREAD D — The Final Signature
+           The quiet echo of the Cover's ANWESHA.
+           Small. Still. Complete.
+           ==================================================== -->
+      <div class="nc-signature-spread" id="nc-signature-spr">
+        <p class="nc-sig-name">Anwesha</p>
+        <p class="nc-sig-role">UI &nbsp;/&nbsp; UX Designer</p>
+        <div class="nc-sig-rule"></div>
+        <p class="nc-sig-close">Issue Complete.</p>
+        <p class="nc-sig-credits">Studio Anwesha &nbsp;&nbsp;&middot;&nbsp;&nbsp; Issue 01 &nbsp;&nbsp;&middot;&nbsp;&nbsp; 2025</p>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    /* ===========================================================
+       CHAPTER 06 — THE NEXT CHAPTER SCROLL ENGINE
+       Section: 360vh  Sticky: 100vh  Runway: 260vh
+
+       Timeline (deliberately slower — the portfolio decelerates):
+         p 0.00 – 0.20   Title spread (full, long hold)
+         p 0.18 – 0.26   Title fades
+         p 0.24 – 0.52   Message spread + journey breadcrumb
+         p 0.50 – 0.58   Message fades
+         p 0.56 – 0.82   Contact spread + items stagger
+         p 0.80 – 0.88   Contact fades
+         p 0.84 – 1.00   Signature (stays — never fades away)
+    =========================================================== */
+    (function () {
+      const sec = document.getElementById('nc-sec');
+      if (!sec) return;
+
+      const tSpr   = document.getElementById('nc-title-spr');
+      const msgSpr = document.getElementById('nc-message-spr');
+      const ctSpr  = document.getElementById('nc-contact-spr');
+      const sigSpr = document.getElementById('nc-signature-spr');
+
+      const ci1 = document.getElementById('nc-ci-1');
+      const ci2 = document.getElementById('nc-ci-2');
+      const ci3 = document.getElementById('nc-ci-3');
+
+      const clamp01 = v => Math.min(Math.max(v, 0), 1);
+      const range   = (p, a, b) => clamp01((p - a) / (b - a));
+
+      function progress() {
+        const r = sec.getBoundingClientRect();
+        return clamp01(-r.top / (sec.offsetHeight - window.innerHeight));
+      }
+
+      function applyEl(el, op, drift) {
+        if (!el) return;
+        const d = (1 - op) * (drift || 20);
+        el.style.opacity = op;
+        el.style.transform = `translateY(${d}px)`;
+        el.style.pointerEvents = op > 0.5 ? 'auto' : 'none';
+      }
+
+      function tick() {
+        const p = progress();
+
+        /* A: Title — long hold, slow fade */
+        const opT = p < 0.18 ? 1 : 1 - range(p, 0.18, 0.28);
+        applyEl(tSpr, opT, -14);
+
+        /* B: Message */
+        const opM = Math.min(range(p, 0.24, 0.34), 1 - range(p, 0.50, 0.60));
+        applyEl(msgSpr, opM, 16);
+
+        /* C: Contact */
+        const opC = Math.min(range(p, 0.56, 0.66), 1 - range(p, 0.80, 0.88));
+        applyEl(ctSpr, opC, 18);
+        if (ci1) { if (p > 0.62) ci1.classList.add('nc-item-visible'); else ci1.classList.remove('nc-item-visible'); }
+        if (ci2) { if (p > 0.67) ci2.classList.add('nc-item-visible'); else ci2.classList.remove('nc-item-visible'); }
+        if (ci3) { if (p > 0.72) ci3.classList.add('nc-item-visible'); else ci3.classList.remove('nc-item-visible'); }
+
+        /* D: Signature — fades in and STAYS. Never fades out.
+           The portfolio does not end with a blank screen. */
+        const opS = range(p, 0.84, 0.96);
+        if (sigSpr) {
+          sigSpr.style.opacity = opS;
+          const d = (1 - opS) * 18;
+          sigSpr.style.transform = `translateY(${d}px)`;
+          sigSpr.style.pointerEvents = opS > 0.5 ? 'auto' : 'none';
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      tick();
+    })();
   </script>
 </body>
 </html>
