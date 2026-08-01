@@ -185,7 +185,6 @@
        background-attachment: local (NOT fixed) — each letter
        is an independent portrait window.
        ============================================================ */
-
     .masked-title {
       font-family: var(--serif);
       font-weight: 900;
@@ -320,14 +319,14 @@
     .btn-secondary:hover { background: var(--blush); border-color: var(--blush); }
 
     /* ============================================================
-       NEXT SECTION — magazine page-turn
+       NEXT SECTION — magazine page-turn (Bridge to Ch 2)
        ============================================================ */
     .next-section {
       position: relative; width: 100%; height: 100vh;
-      background: var(--charcoal); color: var(--cream); z-index: 10;
+      background: #150F17; color: #F0E6DF; z-index: 10;
       display: flex; flex-direction: column; justify-content: center;
       align-items: center; text-align: center; padding: 0 6%;
-      box-shadow: 0 -28px 56px rgba(38,38,38,.2);
+      box-shadow: 0 -28px 56px rgba(10,6,12,.35);
     }
     .next-inner {
       max-width: 560px; display: flex; flex-direction: column; gap: 20px;
@@ -340,7 +339,7 @@
     .next-sub   { font-size: .68rem; opacity: .45; letter-spacing: .12em; text-transform: uppercase; }
 
     /* ============================================================
-       RESPONSIVE
+       RESPONSIVE (Hero Section Only)
        ============================================================ */
     @media (max-width: 1024px) {
       .masked-title { font-size: 13vw; }
@@ -432,11 +431,7 @@
 
           <h1 class="masked-title" aria-label="ANWESHA">
 
-            <!--
-              A  — idx 0
-              Photo: anwesha.png (original portrait — pink lanyard)
-              Mood: direct, confrontational, the opening note
-            -->
+            <!-- A  — idx 0 -->
             <span class="char-unit" data-idx="0"
               style="width:.72em; --char-bg: url('anwesha.png'); --px-factor: -1.4">
               <span class="char-part char-top">A</span>
@@ -444,11 +439,7 @@
               <span class="char-part char-bottom">A</span>
             </span>
 
-            <!--
-              N  — idx 1
-              Photo: photo-n.jpg (teal+orange saree, building, gazing sideways)
-              Mood: composed, architectural — matches the vertical building lines
-            -->
+            <!-- N  — idx 1 -->
             <span class="char-unit" data-idx="1"
               style="width:.72em; margin-left:-.05em; --char-bg: url('photo-n.jpg'); --px-factor: -0.8">
               <span class="char-part char-top">N</span>
@@ -456,11 +447,7 @@
               <span class="char-part char-bottom">N</span>
             </span>
 
-            <!--
-              W  — idx 2
-              Photo: photo-w.jpg (yellow kurta, pink bougainvillea, laughing)
-              Mood: joyful, botanical — contrasts the wide W beautifully
-            -->
+            <!-- W  — idx 2 -->
             <span class="char-unit" data-idx="2"
               style="width:.94em; margin-left:-.06em; --char-bg: url('photo-w.jpg'); --px-factor: -0.3">
               <span class="char-part char-top">W</span>
@@ -468,11 +455,7 @@
               <span class="char-part char-bottom">W</span>
             </span>
 
-            <!--
-              E  — idx 3 — the CENTRE letter
-              Photo: photo-e.jpg (red saree, garden, warm direct smile)
-              Mood: warm, golden, frontal — the heart of the name
-            -->
+            <!-- E  — idx 3 — the CENTRE letter -->
             <span class="char-unit" data-idx="3"
               style="width:.66em; margin-left:-.04em; --char-bg: url('photo-e.jpg'); --px-factor: 0">
               <span class="char-part char-top">E</span>
@@ -480,11 +463,7 @@
               <span class="char-part char-bottom">E</span>
             </span>
 
-            <!--
-              S  — idx 4
-              Photo: photo-s.jpg (teal saree, sitting on railing, street behind)
-              Mood: relaxed, urban, candid — slight lean mirrors the S curve
-            -->
+            <!-- S  — idx 4 -->
             <span class="char-unit" data-idx="4"
               style="width:.67em; margin-left:-.05em; --char-bg: url('photo-s.jpg'); --px-factor: 0.3">
               <span class="char-part char-top">S</span>
@@ -492,11 +471,7 @@
               <span class="char-part char-bottom">S</span>
             </span>
 
-            <!--
-              H  — idx 5
-              Photo: photo-h.jpg (yellow kurti, jhumkas, bougainvillea, looking sideways up)
-              Mood: dreamy, profile — gaze upward matches the tall H verticals
-            -->
+            <!-- H  — idx 5 -->
             <span class="char-unit" data-idx="5"
               style="width:.72em; margin-left:-.04em; --char-bg: url('photo-h.jpg'); --px-factor: 0.8">
               <span class="char-part char-top">H</span>
@@ -504,11 +479,7 @@
               <span class="char-part char-bottom">H</span>
             </span>
 
-            <!--
-              A  — idx 6 — closing A
-              Photo: photo-a2.jpg (placeholder = anwesha.png until 7th photo arrives)
-              Swap src to photo-a2.jpg once you send the final image.
-            -->
+            <!-- A  — idx 6 — closing A -->
             <span class="char-unit" data-idx="6"
               style="width:.72em; margin-left:-.06em; --char-bg: url('anwesha.png'); --px-factor: 1.4">
               <span class="char-part char-top">A</span>
@@ -539,18 +510,17 @@
     </div><!-- /hero-sticky -->
 
     <!-- ===========================================================
-         NEXT SECTION — magazine page-turn
+         NEXT SECTION — magazine page-turn (Quiet Entry to Ch 2)
          =========================================================== -->
     <div class="next-section" id="next-section">
       <div class="next-inner" id="next-inner">
-        <span class="next-label">Portfolio — Selected Works</span>
-        <h2 class="next-title">Where every pixel<br>earns its place.</h2>
-        <span class="next-sub">Scroll to explore the work</span>
+        <span class="next-label">Chapter 02</span>
+        <h2 class="next-title" style="font-family: var(--serif); font-weight: 900;">The Manifesto</h2>
+        <span class="next-sub">Silence Between Two Stories</span>
       </div>
     </div>
 
   </div><!-- /scroll-track -->
-
 
   <script>
     /* ===========================================================
@@ -769,6 +739,357 @@
           nextSection.style.transform = `translateY(${((1 - easeInOutS(tP)) * 100).toFixed(2)}vh)`;
           if (tP > 0.55) nextSection.classList.add('visible');
           else           nextSection.classList.remove('visible');
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      tick();
+    });
+  </script>
+
+  <!-- ===========================================================
+       CHAPTER 02 — THE MANIFESTO (Quiet Edition)
+       =========================================================== -->
+  <style>
+    .manifesto-section {
+      position: relative;
+      background: #150F17; /* Deep, matte, soft editorial plum */
+      height: 250vh;
+      overflow: hidden;
+    }
+
+    /* Subtle paper noise texture for the manifesto section */
+    .manifesto-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+    }
+
+    .manifesto-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    /* Roving soft light effect across the paper */
+    .manifesto-spotlight {
+      position: absolute;
+      width: 80vmax;
+      height: 80vmax;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 196, 215, 0.035) 0%, rgba(232, 175, 194, 0.01) 50%, transparent 80%);
+      pointer-events: none;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Giant Background Word */
+    .manifesto-bg-word {
+      position: absolute;
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 32vw;
+      color: #F0E6DF;
+      opacity: 0.04; /* 4% for ultra-subtle texture */
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      pointer-events: none;
+      z-index: 2;
+      user-select: none;
+      white-space: nowrap;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      transition: opacity 1s ease, transform 0.1s ease-out;
+    }
+
+    /* Editorial Details (Chapter header, page numbers, coordinates) */
+    .m-detail {
+      position: absolute;
+      font-family: var(--sans);
+      font-size: 0.58rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(240, 230, 223, 0.25);
+      z-index: 5;
+      opacity: 0;
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .m-detail-tl { top: 50px; left: 6%; }
+    .m-detail-tr { top: 50px; right: 6%; font-family: var(--editorial); font-style: italic; text-transform: none; font-size: 1rem; letter-spacing: 0; opacity: 0.2; }
+    .m-detail-bl { bottom: 50px; left: 6%; }
+    .m-detail-br { bottom: 50px; right: 6%; color: rgba(240, 230, 223, 0.15); }
+
+    .m-divider-v {
+      position: absolute;
+      left: 4.5%;
+      top: 100px;
+      bottom: 100px;
+      width: 0.5px;
+      background: rgba(240, 230, 223, 0.05);
+      z-index: 3;
+    }
+
+    /* Manifesto Typography Layout */
+    .manifesto-content {
+      position: relative;
+      width: 100%;
+      max-width: 82vw;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vh;
+      z-index: 4;
+    }
+
+    .manifesto-line {
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: 11.5vw;
+      line-height: 0.9;
+      text-transform: uppercase;
+      letter-spacing: -0.04em;
+      color: #F0E6DF;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .m-line-center {
+      align-self: center;
+      margin-left: 10vw;
+    }
+
+    .m-line-right {
+      align-self: flex-end;
+      margin-right: 5vw;
+    }
+
+    .m-line-italic {
+      font-family: var(--editorial);
+      font-weight: 300;
+      font-style: italic;
+      text-transform: lowercase;
+      font-size: 12vw;
+      color: rgba(240, 230, 223, 0.7);
+    }
+
+    /* Reveal States */
+    .manifesto-line.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .m-detail.active {
+      opacity: 1;
+    }
+
+    /* SELECTED WORK exit screen */
+    .selected-work-bridge {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 5;
+      transform: translateY(20px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .selected-work-bridge.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .bridge-line {
+      width: 40px;
+      height: 0.5px;
+      background: rgba(240, 230, 223, 0.3);
+      margin-bottom: 24px;
+    }
+
+    .bridge-title {
+      font-family: var(--serif);
+      font-size: 4.5vw;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #F0E6DF;
+      text-align: center;
+      line-height: 1;
+    }
+
+    .bridge-sub {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: rgba(240, 230, 223, 0.35);
+      margin-top: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .manifesto-section { height: auto; padding: 120px 0 100px; }
+      .manifesto-sticky { position: relative; height: auto; display: block; }
+      .manifesto-content { max-width: 90vw; padding: 0 5%; gap: 3vh; }
+      .manifesto-line { font-size: 14vw; opacity: 1 !important; transform: none !important; }
+      .m-line-italic { font-size: 15vw; }
+      .manifesto-bg-word { display: none; }
+      .m-divider-v, .m-detail { display: none; }
+      .selected-work-bridge { position: relative; margin-top: 15vh; opacity: 1; transform: none; display: flex; }
+      .bridge-title { font-size: 8vw; }
+    }
+  </style>
+
+  <section class="manifesto-section" id="manifesto-sec">
+    <div class="manifesto-sticky">
+      <!-- spotlight background -->
+      <div class="manifesto-spotlight" id="m-spotlight"></div>
+      
+      <!-- Giant background word for texture -->
+      <div class="manifesto-bg-word" id="m-bg-word">SILENCE</div>
+      
+      <!-- Vertical minimal grid divider -->
+      <div class="m-divider-v"></div>
+      
+      <!-- Small editorial details -->
+      <div class="m-detail m-detail-tl js-m-detail">CHAPTER 02</div>
+      <div class="m-detail m-detail-tr js-m-detail">Est. 2026 // Editorial Notes</div>
+      <div class="m-detail m-detail-bl js-m-detail">Issue 01 &nbsp;·&nbsp; Philosophy</div>
+      <div class="m-detail m-detail-br js-m-detail">Page 08</div>
+      
+      <!-- The main manifesto content -->
+      <div class="manifesto-content" id="m-content">
+        <div class="manifesto-line js-m-line">WHAT IS</div>
+        <div class="manifesto-line m-line-center m-line-italic js-m-line">omitted</div>
+        <div class="manifesto-line m-line-right js-m-line">STRENGTHENS</div>
+        <div class="manifesto-line m-line-center js-m-line">WHAT REMAINS</div>
+      </div>
+      
+      <!-- Quiet bridge title to next chapter -->
+      <div class="selected-work-bridge" id="m-bridge">
+        <div class="bridge-line"></div>
+        <h3 class="bridge-title">SELECTED WORK</h3>
+        <div class="bridge-sub">Chapter 03 &nbsp;·&nbsp; Case Studies</div>
+      </div>
+      
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sec = document.getElementById('manifesto-sec');
+      if (!sec) return;
+
+      const bgWord = document.getElementById('m-bg-word');
+      const spotlight = document.getElementById('m-spotlight');
+      const lines = document.querySelectorAll('.js-m-line');
+      const details = document.querySelectorAll('.js-m-detail');
+      const content = document.getElementById('m-content');
+      const bridge = document.getElementById('m-bridge');
+
+      // Spotlight tracking
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let sX = mouseX, sY = mouseY;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      }, { passive: true });
+
+      function updateSpotlight() {
+        sX += (mouseX - sX) * 0.05;
+        sY += (mouseY - sY) * 0.05;
+        if (spotlight) {
+          spotlight.style.left = `${sX}px`;
+          spotlight.style.top = `${sY}px`;
+        }
+        requestAnimationFrame(updateSpotlight);
+      }
+      updateSpotlight();
+
+      // Scroll interaction
+      function getProgress() {
+        const rect = sec.getBoundingClientRect();
+        const start = -rect.top;
+        const total = sec.offsetHeight - window.innerHeight;
+        return Math.min(Math.max(start / total, 0), 1);
+      }
+
+      function tick() {
+        const p = getProgress();
+        if (p < 0 || p > 1) {
+          requestAnimationFrame(tick);
+          return;
+        }
+
+        // 1. Details and Background Word fade in (p: 0.0 -> 0.15)
+        const entranceOp = Math.min(p / 0.15, 1);
+        details.forEach(detail => {
+          detail.style.opacity = entranceOp * 0.25; // Target opacity 0.25
+        });
+        if (bgWord) {
+          bgWord.style.opacity = entranceOp * 0.04;
+          // Background word slow parallax
+          const transY = (p - 0.5) * -60;
+          bgWord.style.transform = `translate3d(-50%, calc(-50% + ${transY}px), 0)`;
+        }
+
+        // 2. Lines reveal staggered (p: 0.15 -> 0.60)
+        lines.forEach((line, idx) => {
+          const start = 0.15 + idx * 0.10;
+          const end = start + 0.15;
+          const lineP = Math.min(Math.max((p - start) / (end - start), 0), 1);
+          line.style.opacity = lineP;
+          line.style.transform = `translate3d(0, ${(1 - lineP) * 30}px, 0)`;
+        });
+
+        // 3. Manifesto content and background word scroll exit (p: 0.65 -> 0.85)
+        if (p >= 0.65) {
+          const exitP = Math.min((p - 0.65) / 0.20, 1);
+          const easeExit = 1 - Math.pow(1 - exitP, 3); // easeOutCubic
+          content.style.transform = `translate3d(0, -${easeExit * 80}px, 0)`;
+          content.style.opacity = 1 - easeExit;
+
+          if (bgWord) {
+            bgWord.style.opacity = (1 - easeExit) * 0.04;
+          }
+          details.forEach(detail => {
+            detail.style.opacity = (1 - easeExit) * 0.25;
+          });
+        } else {
+          content.style.transform = 'translate3d(0, 0, 0)';
+          content.style.opacity = 1;
+        }
+
+        // 4. SELECTED WORK bridge fade in (p: 0.80 -> 0.95)
+        if (p >= 0.80) {
+          const bridgeP = Math.min((p - 0.80) / 0.15, 1);
+          bridge.style.opacity = bridgeP;
+          bridge.style.transform = `translate3d(0, ${(1 - bridgeP) * 20}px, 0)`;
+          bridge.style.pointerEvents = bridgeP > 0.5 ? 'auto' : 'none';
+        } else {
+          bridge.style.opacity = 0;
+          bridge.style.transform = 'translate3d(0, 20px, 0)';
+          bridge.style.pointerEvents = 'none';
         }
 
         requestAnimationFrame(tick);
