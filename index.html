@@ -2871,13 +2871,13 @@
       </div>
 
       <!-- ========================================================
-           CLOSING BRIDGE → Chapter 06: The Journey
+           CLOSING BRIDGE &rarr; Chapter 06: The Next Chapter
            ======================================================== -->
       <div class="ds-closing" id="ds-closing-spr">
-        <h2 class="ds-closing-line">The<br>Journey</h2>
+        <h2 class="ds-closing-line">The Next<br>Chapter</h2>
         <div class="ds-closing-meta">
           <div class="ds-closing-rule"></div>
-          <span class="ds-closing-chapter">Chapter 06 &nbsp;&middot;&nbsp; The Journey</span>
+          <span class="ds-closing-chapter">Chapter 06 &nbsp;&middot;&nbsp; The Next Chapter</span>
         </div>
       </div>
 
@@ -2940,7 +2940,7 @@
         el.style.pointerEvents = op > 0.5 ? 'auto' : 'none';
       }
 
-      const WORDS = ['ANWESHA', 'WORK', 'DETAIL', 'JOURNEY'];
+      const WORDS = ['ANWESHA', 'WORK', 'DETAIL', 'NEXT'];
       let wIdx = -1, wFading = false;
       function setWord(idx) {
         if (idx === wIdx || wFading) return;
@@ -3296,22 +3296,14 @@
         </div>
         <div class="nc-contact-list">
 
-          <!-- UPDATE with real email before publishing -->
           <div class="nc-contact-item" id="nc-ci-1">
             <span class="nc-contact-channel">Electronic Mail</span>
-            <a class="nc-contact-value" href="mailto:anwesha.jena@gmail.com">anwesha.jena@gmail.com</a>
+            <a class="nc-contact-value" href="mailto:anweshajena592@gmail.com">anweshajena592@gmail.com</a>
           </div>
 
-          <!-- UPDATE with real LinkedIn URL before publishing -->
           <div class="nc-contact-item" id="nc-ci-2">
             <span class="nc-contact-channel">LinkedIn</span>
-            <a class="nc-contact-value" href="https://linkedin.com/in/anwesha-jena" target="_blank" rel="noopener">linkedin.com/in/anwesha-jena</a>
-          </div>
-
-          <!-- UPDATE with real Behance URL before publishing -->
-          <div class="nc-contact-item" id="nc-ci-3">
-            <span class="nc-contact-channel">Behance</span>
-            <a class="nc-contact-value" href="https://behance.net/anwesha" target="_blank" rel="noopener">behance.net/anwesha</a>
+            <a class="nc-contact-value" href="https://www.linkedin.com/in/anwesha-jena-885629267?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener">linkedin.com/in/anwesha-jena</a>
           </div>
 
         </div>
@@ -3358,7 +3350,6 @@
 
       const ci1 = document.getElementById('nc-ci-1');
       const ci2 = document.getElementById('nc-ci-2');
-      const ci3 = document.getElementById('nc-ci-3');
 
       const clamp01 = v => Math.min(Math.max(v, 0), 1);
       const range   = (p, a, b) => clamp01((p - a) / (b - a));
@@ -3392,7 +3383,6 @@
         applyEl(ctSpr, opC, 18);
         if (ci1) { if (p > 0.62) ci1.classList.add('nc-item-visible'); else ci1.classList.remove('nc-item-visible'); }
         if (ci2) { if (p > 0.67) ci2.classList.add('nc-item-visible'); else ci2.classList.remove('nc-item-visible'); }
-        if (ci3) { if (p > 0.72) ci3.classList.add('nc-item-visible'); else ci3.classList.remove('nc-item-visible'); }
 
         /* D: Signature — fades in and STAYS. Never fades out.
            The portfolio does not end with a blank screen. */
