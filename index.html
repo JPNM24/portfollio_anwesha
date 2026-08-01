@@ -341,9 +341,13 @@
     /* ============================================================
        RESPONSIVE (Hero Section Only)
        ============================================================ */
-    @media (max-width: 1024px) {
-      .masked-title { font-size: 13vw; }
-      .hero-bottom  { grid-template-columns: 1fr 1fr; gap: 5%; }
+    /* === TABLET (769px – 1024px) === */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .masked-title { font-size: 14vw; letter-spacing: -.05em; }
+      .hero-bottom  { grid-template-columns: 1fr 1fr; gap: 4%; }
+      .hero-meta    { gap: 20px; }
+      .nav          { padding: 28px 5%; }
+      .hero-container { padding: 100px 5% 60px; gap: 40px; }
     }
     @media (max-width: 768px) {
       body { cursor: auto; }
@@ -947,6 +951,13 @@
       margin-top: 16px;
     }
 
+    /* === TABLET (769px – 1024px) — Chapter 02 === */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .manifesto-line { font-size: 10vw; }
+      .m-line-italic  { font-size: 11vw; }
+      .manifesto-content { gap: 2.5vh; padding: 0 6%; }
+      .m-detail { font-size: .5rem; }
+    }
     @media (max-width: 768px) {
       .manifesto-section { height: auto; padding: 120px 0 100px; }
       .manifesto-sticky { position: relative; height: auto; display: block; }
@@ -1341,9 +1352,16 @@
     }
 
     /* ---- Responsive ---- */
-    @media (max-width: 1024px) {
+    /* === TABLET (769px – 1024px) — Chapter 03 === */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .project-spread { gap: 5%; padding: 0 5%; }
       .p-title { font-size: clamp(1.8rem, 4.5vw, 3.6rem); }
-      .p-challenge { font-size: 1.2rem; }
+      .p-challenge { font-size: 1.1rem; }
+      .p-mockup { max-height: 55vh; width: auto; }
+      .w-detail { font-size: .48rem; }
+      .p-image { padding: 0; }
+      .p-text { padding: 0; max-width: 46%; }
+      .spread-r .p-text { padding: 0; }
     }
     @media (max-width: 768px) {
       .works-section { height: auto; padding-bottom: 12vh; }
@@ -2167,9 +2185,16 @@
       background: rgba(240, 230, 223, 0.15);
     }
 
-    @media (max-width: 1024px) {
+    /* === TABLET (769px – 1024px) — Chapter 04 === */
+    @media (min-width: 769px) and (max-width: 1024px) {
       .e-title { font-size: clamp(1.8rem, 4.5vw, 3.6rem); }
-      .e-reflection { font-size: 1.2rem; }
+      .e-reflection { font-size: 1.1rem; }
+      .edit-spread { gap: 5%; padding: 0 5%; }
+      .e-display-word { font-size: clamp(4rem, 9vw, 8rem); }
+      .e-detail { font-size: .48rem; }
+      .vis-container-lg { height: 55vh; }
+      .e-visual { padding: 0; }
+      .e-text { max-width: 44%; }
     }
     @media (max-width: 768px) {
       .edit-section { height: auto; padding-bottom: 12vh; }
@@ -2759,6 +2784,19 @@
       text-transform: uppercase; letter-spacing: .22em; color: var(--mauve);
     }
 
+    /* === TABLET (769px – 1024px) — Chapter 05 === */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .ds-portrait-spread { grid-template-columns: 1fr 1fr; }
+      .ds-portrait-col { min-height: 100vh; }
+      .ds-name { font-size: clamp(3rem, 6vw, 6rem); }
+      .ds-text-col { padding: 60px 5%; gap: 28px; }
+      .ds-work-spread { grid-template-columns: 0.4fr 0.6fr; gap: 4vw; }
+      .ds-work-label-large { font-size: clamp(4rem, 7vw, 7rem); }
+      .ds-val-lg { font-size: clamp(2.5rem, 4.5vw, 5rem); }
+      .ds-val-md { font-size: clamp(1.2rem, 2.2vw, 2.4rem); }
+      .d-detail { font-size: .48rem; }
+      .ds-closing-line { font-size: clamp(3rem, 6vw, 7rem); }
+    }
     /* Responsive */
     @media (max-width: 768px) {
       .designer-section { height: auto; padding-bottom: 12vh; }
@@ -3224,6 +3262,16 @@
     }
 
     /* Responsive */
+    /* === TABLET (769px – 1024px) — Chapter 06 === */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .nc-title-main { font-size: clamp(3.5rem, 8vw, 9rem); }
+      .nc-contact-spread { grid-template-columns: 0.42fr 0.58fr; gap: 4vw; padding: 60px 6%; }
+      .nc-contact-title { font-size: clamp(2rem, 4vw, 4.5rem); }
+      .nc-contact-value { font-size: clamp(.9rem, 1.6vw, 1.4rem); }
+      .nc-message-quote { font-size: clamp(1.2rem, 2.4vw, 2.2rem); }
+      .nc-detail { font-size: .48rem; }
+      .nc-sig-name { font-size: clamp(1.6rem, 3vw, 3.2rem); }
+    }
     @media (max-width: 768px) {
       .nc-section { height: auto; padding-bottom: 12vh; }
       .nc-sticky { position: relative; height: auto; display: block; }
